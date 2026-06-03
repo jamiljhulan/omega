@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Hub Online | Premium Designer Fashion</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,400;0,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Core Variables --- */
+        :root {
+            --fg-black: #0A0A0A;
+            --fg-white: #FFFFFF;
+            --fg-grey-light: #EAEAEA;
+            --fg-grey: #666666;
+            --fg-green: #25D366; /* WhatsApp Green */
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-sans);
+            background-color: var(--fg-white);
+            color: var(--fg-black);
+        }
+
+        /* --- Simple Header --- */
+        .simple-header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid var(--fg-grey-light);
+        }
+        .simple-logo {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.5rem;
+            color: var(--fg-black);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            padding: 80px 4%;
+            text-align: center;
+            background-color: #FAFAFA;
+            border-bottom: 1px solid var(--fg-grey-light);
+        }
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            margin: 0 0 15px 0;
+        }
+        .hero-subtitle {
+            color: var(--fg-grey);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+        }
+        .whatsapp-btn-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--fg-green);
+            color: var(--fg-white);
+            padding: 15px 35px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* --- Product Grid --- */
+        .shop-section {
+            padding: 60px 4%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .shop-card {
+            border: 1px solid var(--fg-grey-light);
+            display: flex;
+            flex-direction: column;
+        }
+        .shop-card-image {
+            width: 100%;
+            padding-top: 125%;
+            position: relative;
+            background-color: #F8F8F8;
+            overflow: hidden;
+        }
+        .shop-card-image img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        .shop-card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .shop-card-title {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+        }
+        .shop-card-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .whatsapp-btn-card {
+            display: block;
+            text-align: center;
+            background-color: var(--fg-black);
+            color: var(--fg-white);
+            padding: 12px 0;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-btn-card:hover {
+            background-color: var(--fg-green);
+        }
+
+        /* --- Footer --- */
+        .simple-footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--fg-black);
+            color: var(--fg-white);
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 900px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-title { font-size: 2.2rem; }
+        }
+        @media (max-width: 600px) {
+            .product-grid { grid-template-columns: 1fr; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simple Header -->
+    <header class="simple-header">
+        <a href="/" class="simple-logo">OMEGA HUB</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Premium Designer Collections</h1>
+        <p class="hero-subtitle">Curating the ultimate luxury aesthetic. See something you love? Connect with our team instantly to secure your order.</p>
+        
+        <!-- Main WhatsApp CTA -->
+        <a href="https://wa.me/03323188846" target="_blank" class="whatsapp-btn-main">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Message Us on WhatsApp
+        </a>
+    </section>
+
+    <!-- Shop Highlights -->
+    <section class="shop-section">
+        <h2 class="section-title">Trending Now</h2>
+        
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+            <div class="shop-card">
+                <div class="shop-card-image">
+                    <img src="images/BAGS/Balenciaga/Bag-Balenciaga-001.jpg" alt="Balenciaga Bag" loading="lazy">
+                </div>
+                <div class="shop-card-content">
+                    <h3 class="shop-card-title">Balenciaga Hourglass</h3>
+                    <div class="shop-card-price">$950</div>
+                    <a href="https://wa.me/03323188846" target="_blank" class="whatsapp-btn-card">ORDER VIA WHATSAPP</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="shop-card">
+                <div class="shop-card-image">
+                    <img src="images/SHOES/Christian-Louboutin/Shoes-ChristianLouboutin1.jpg" alt="Louboutin Pumps" loading="lazy">
+                </div>
+                <div class="shop-card-content">
+                    <h3 class="shop-card-title">Signature Red Bottom Pumps</h3>
+                    <div class="shop-card-price">$850</div>
+                    <a href="https://wa.me/03323188846" target="_blank" class="whatsapp-btn-card">ORDER VIA WHATSAPP</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="shop-card">
+                <div class="shop-card-image">
+                    <img src="images/WATCHES/Cartier/Watches-cartier1.jpg" alt="Cartier Watch" loading="lazy">
+                </div>
+                <div class="shop-card-content">
+                    <h3 class="shop-card-title">Panthère Premium Watch</h3>
+                    <div class="shop-card-price">$1,150</div>
+                    <a href="https://wa.me/03323188846" target="_blank" class="whatsapp-btn-card">ORDER VIA WHATSAPP</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="simple-footer">
+        <p>&copy; 2026 Omega Hub Online. All Rights Reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #A0A0A0;">Need help? <a href="https://wa.me/03323188846" target="_blank" style="color: #25D366; text-decoration: none;">WhatsApp Us: 03323188846</a></p>
+    </footer>
+
+</body>
+</html>
