@@ -1,1692 +1,877 @@
- <link rel="icon" href="images/favicon.png" type="image/png">
-<div id="header-placeholder"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The IT-List | Omega Hub Online</title>
+    
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <style>
+        /* --- Global Shared Variables --- */
+        :root {
+            --fg-black: #0A0A0A;
+            --fg-white: #FFFFFF;
+            --fg-off-white: #FAFAFA;
+            --fg-bg-tint: #F7F7F7; 
+            --fg-grey: #666666;
+            --fg-grey-light: #E0E0E0;
+            --fg-border: #EAEAEA;
+            --fg-accent: #FF0055;
+            --fg-gold: #D4AF37; 
+            --fg-green: #00A650; 
+            
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            background-color: var(--fg-off-white);
+            color: var(--fg-black);
+            overflow-x: hidden; /* Prevents horizontal scrolling issues */
+        }
+        
+        /* Universal box sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
     <script src="header.js"></script>
 
-<!-- Google Fonts for Editorial Typography -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<section class="fg-hero-wrapper">
-    <div class="fg-hero-container">
-        
-        <!-- Left: Editorial Copy & Conversion -->
-        <div class="fg-hero-content">
-            <div class="fg-badge">The IT-List</div>
-            <h1 class="fg-title">Curated for the<br><em>Fashion Obsessed.</em></h1>
-            <p class="fg-subtitle">Discover premium designer bags, iconic shoes, and statement accessories. Elevate your aesthetic with fast, seamless US shipping.</p>
+    <section class="fg-hero-wrapper">
+        <div class="fg-hero-container">
             
-            <div class="fg-actions">
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-btn-primary">
-                    DM TO ORDER
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-                <a href="new-in.html" class="fg-btn-secondary">Explore Feed</a>
-            </div>
-            
-            <!-- Trust Signals -->
-            <div class="fg-trust-signals">
-                <span>🇺🇸 Free US Shipping</span>
-                <span class="dot">•</span>
-                <span>⭐ 5-Star Quality</span>
-                <span class="dot">•</span>
-                <span>🔒 Secure DM Ordering</span>
-            </div>
-        </div>
-
-        <!-- Right: Asymmetric Visual Grid -->
-        <div class="fg-hero-visuals">
-            <!-- Main Large Image -->
-            <div class="fg-img-large">
-                <img src="images/mix-Inventory/Mixinventory-1.jpg" alt="Omega Hub Premium Fashion Collection">
-            </div>
-            
-            <!-- Stacked Secondary Images -->
-            <div class="fg-img-stack">
-                <div class="fg-img-small">
-                    <img src="images/BAGS/Chanel/Celine-1.jpg" alt="Designer Chanel Bag">
-                </div>
-                <div class="fg-img-small">
-                    <img src="images/SHOES/Christian-Louboutin/Shoes-ChristianLouboutin1.jpg" alt="Christian Louboutin Red Bottoms">
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<style>
-    /* --- Fashion Girl Variables --- */
-    :root {
-        --fg-black: #0A0A0A;
-        --fg-white: #FFFFFF;
-        --fg-off-white: #FAFAFA;
-        --fg-grey: #666666;
-        --fg-border: #EAEAEA;
-        
-        --font-serif: 'Playfair Display', serif;
-        --font-sans: 'Inter', sans-serif;
-    }
-
-    /* --- Hero Wrapper --- */
-    .fg-hero-wrapper {
-        background-color: var(--fg-off-white);
-        padding: 60px 4%;
-        overflow: hidden;
-        border-bottom: 1px solid var(--fg-border);
-    }
-
-    .fg-hero-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-    }
-
-    /* --- Typography & Content --- */
-    .fg-hero-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    .fg-badge {
-        display: inline-block;
-        font-family: var(--font-sans);
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--fg-grey);
-        margin-bottom: 20px;
-    }
-
-    .fg-title {
-        font-family: var(--font-serif);
-        font-size: 4.5rem;
-        line-height: 1.05;
-        color: var(--fg-black);
-        margin: 0 0 25px 0;
-        letter-spacing: -1px;
-    }
-
-    .fg-title em {
-        font-style: italic;
-        color: var(--fg-grey);
-    }
-
-    .fg-subtitle {
-        font-family: var(--font-sans);
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: var(--fg-grey);
-        margin: 0 0 40px 0;
-        max-width: 90%;
-    }
-
-    /* --- Call to Action Buttons --- */
-    .fg-actions {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        margin-bottom: 40px;
-    }
-
-    .fg-btn-primary {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background-color: var(--fg-black);
-        color: var(--fg-white);
-        padding: 16px 32px;
-        font-family: var(--font-sans);
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    .fg-btn-primary:hover {
-        background-color: #333;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    .fg-btn-secondary {
-        display: inline-block;
-        color: var(--fg-black);
-        font-family: var(--font-sans);
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-decoration: none;
-        padding: 16px 0;
-        border-bottom: 2px solid transparent;
-        transition: border-color 0.3s ease;
-    }
-
-    .fg-btn-secondary:hover {
-        border-color: var(--fg-black);
-    }
-
-    /* --- Trust Signals --- */
-    .fg-trust-signals {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        font-family: var(--font-sans);
-        font-size: 0.8rem;
-        color: var(--fg-grey);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    .dot { color: #CCC; }
-
-    /* --- Asymmetric Visual Grid --- */
-    .fg-hero-visuals {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        gap: 20px;
-        height: 650px;
-        opacity: 0;
-        animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
-    }
-
-    .fg-img-large, .fg-img-small {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background-color: #EFEFEF; /* Placeholder skeleton color */
-    }
-
-    .fg-img-large img, .fg-img-small img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        transition: transform 0.7s ease;
-    }
-
-    .fg-img-large:hover img, .fg-img-small:hover img {
-        transform: scale(1.05);
-    }
-
-    .fg-img-stack {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        gap: 20px;
-        height: 100%;
-    }
-
-    /* --- Animations --- */
-    @keyframes fadeUp {
-        0% { opacity: 0; transform: translateY(30px); }
-        100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInRight {
-        0% { opacity: 0; transform: translateX(40px); }
-        100% { opacity: 1; transform: translateX(0); }
-    }
-
-    /* --- Responsive Design --- */
-    @media (max-width: 1024px) {
-        .fg-title { font-size: 3.5rem; }
-        .fg-hero-visuals { height: 500px; }
-    }
-
-    @media (max-width: 768px) {
-        .fg-hero-wrapper { padding: 40px 5%; }
-        .fg-hero-container { grid-template-columns: 1fr; gap: 40px; }
-        
-        .fg-title { font-size: 3rem; }
-        .fg-subtitle { max-width: 100%; }
-        
-        .fg-actions { flex-direction: column; align-items: flex-start; }
-        .fg-btn-primary { width: 100%; justify-content: center; }
-        
-        .fg-trust-signals { flex-wrap: wrap; }
-        
-        .fg-hero-visuals { 
-            grid-template-columns: 1fr; 
-            height: auto; 
-            gap: 15px; 
-        }
-        
-        .fg-img-large { height: 400px; }
-        
-        .fg-img-stack { 
-            grid-template-columns: 1fr 1fr; 
-            grid-template-rows: auto; 
-            height: 200px; 
-            gap: 15px;
-        }
-    }
-</style>
-
-<!-- ==========================================
-     SECTION 2: CORE COLLECTIONS
-=========================================== -->
-<section class="fg-collections-section">
-    <div class="fg-collections-container">
-        
-        <!-- Section Header -->
-        <div class="fg-section-header">
-            <h2 class="fg-section-title">The Collections</h2>
-            <p class="fg-section-subtitle">Curated categories for the modern wardrobe.</p>
-        </div>
-
-        <!-- Editorial Grid -->
-        <div class="fg-collections-grid">
-            
-            <!-- Category 1: Bags -->
-            <a href="bags.html" class="fg-category-card">
-                <div class="fg-category-img-wrapper">
-                    <img src="images/BAGS/Hermes/Bag-Hermes1.jpg" alt="Premium Designer Bags" loading="lazy">
-                </div>
-                <div class="fg-category-content">
-                    <h3 class="fg-category-name">Designer Bags</h3>
-                    <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                </div>
-            </a>
-
-            <!-- Category 2: Shoes -->
-            <a href="shoes.html" class="fg-category-card">
-                <div class="fg-category-img-wrapper">
-                    <img src="images/SHOES/Jimmy-Choo/Shoes-JimmyChoo1.jpg" alt="Luxury Shoes and Heels" loading="lazy">
-                </div>
-                <div class="fg-category-content">
-                    <h3 class="fg-category-name">Luxury Shoes</h3>
-                    <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                </div>
-            </a>
-
-            <!-- Category 3: Watches -->
-            <a href="watches.html" class="fg-category-card">
-                <div class="fg-category-img-wrapper">
-                    <img src="images/WATCHES/Cartier/Watches-cartier1.jpg" alt="Premium Designer Watches" loading="lazy">
-                </div>
-                <div class="fg-category-content">
-                    <h3 class="fg-category-name">Premium Watches</h3>
-                    <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                </div>
-            </a>
-
-            <!-- Category 4: Glasses -->
-            <a href="sale.html" class="fg-category-card">
-                <div class="fg-category-img-wrapper">
-                    <img src="images/GLASSES/Prada/Glasses-Prada1.jpg" alt="Statement Sunglasses" loading="lazy">
-                </div>
-                <div class="fg-category-content">
-                    <h3 class="fg-category-name">Statement Glasses</h3>
-                    <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                </div>
-            </a>
-
-        </div>
-    </div>
-</section>
-
-<style>
-    /* --- CSS Variables (Shared with Hero) --- */
-    :root {
-        --fg-black: #0A0A0A;
-        --fg-white: #FFFFFF;
-        --fg-grey: #666666;
-        --font-serif: 'Playfair Display', serif;
-        --font-sans: 'Inter', sans-serif;
-    }
-
-    /* --- Section Layout --- */
-    .fg-collections-section {
-        background-color: var(--fg-white);
-        padding: 100px 4%;
-    }
-
-    .fg-collections-container {
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    /* --- Section Typography --- */
-    .fg-section-header {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-
-    .fg-section-title {
-        font-family: var(--font-serif);
-        font-size: 3rem;
-        color: var(--fg-black);
-        margin: 0 0 10px 0;
-        font-weight: 400;
-        letter-spacing: -0.5px;
-    }
-
-    .fg-section-subtitle {
-        font-family: var(--font-sans);
-        font-size: 1rem;
-        color: var(--fg-grey);
-        margin: 0;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    /* --- Grid Layout --- */
-    .fg-collections-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-    }
-
-    /* --- Category Cards --- */
-    .fg-category-card {
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        group; /* Conceptually groups hover states */
-    }
-
-    .fg-category-img-wrapper {
-        width: 100%;
-        aspect-ratio: 3 / 4; /* Editorial portrait aspect ratio */
-        overflow: hidden;
-        background-color: #F5F5F5;
-        margin-bottom: 20px;
-        position: relative;
-    }
-
-    .fg-category-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* Subtle Dark Overlay on Hover */
-    .fg-category-img-wrapper::after {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background-color: rgba(0,0,0,0.1);
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    .fg-category-card:hover .fg-category-img-wrapper img {
-        transform: scale(1.05);
-    }
-
-    .fg-category-card:hover .fg-category-img-wrapper::after {
-        opacity: 1;
-    }
-
-    /* --- Card Content --- */
-    .fg-category-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .fg-category-name {
-        font-family: var(--font-serif);
-        font-size: 1.5rem;
-        color: var(--fg-black);
-        margin: 0 0 10px 0;
-        font-weight: 400;
-    }
-
-    .fg-category-link {
-        font-family: var(--font-sans);
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: var(--fg-grey);
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        transition: color 0.3s ease;
-    }
-
-    .fg-category-link svg {
-        width: 16px;
-        height: 16px;
-        transition: transform 0.3s ease;
-    }
-
-    .fg-category-card:hover .fg-category-link {
-        color: var(--fg-black);
-    }
-
-    .fg-category-card:hover .fg-category-link svg {
-        transform: translateX(4px);
-    }
-
-    /* --- Responsive Breakpoints --- */
-    @media (max-width: 1024px) {
-        .fg-collections-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px 20px;
-        }
-        .fg-section-title { font-size: 2.5rem; }
-    }
-
-    @media (max-width: 600px) {
-        .fg-collections-section { padding: 60px 5%; }
-        .fg-collections-grid {
-            grid-template-columns: 1fr;
-            gap: 50px;
-        }
-        .fg-section-title { font-size: 2.2rem; }
-        .fg-category-img-wrapper { aspect-ratio: 4 / 5; }
-    }
-</style>
-
-
-<!-- ==========================================
-     SECTION 3: TRENDING NOW (CAROUSEL) WITH PRICING
-=========================================== -->
-<section class="fg-trending-section" id="trending">
-    <div class="fg-trending-header">
-        <h2 class="fg-section-title">Trending Now</h2>
-        <p class="fg-section-subtitle">The pieces dominating our DMs right now.</p>
-    </div>
-
-    <!-- Scroll-Snap Carousel Container -->
-    <div class="fg-carousel-wrapper">
-        <div class="fg-carousel" id="product-carousel">
-            
-            <!-- Product Card 1: Bag ($800 - $1200) -->
-            <div class="fg-product-card glass-effect">
-                <div class="fg-product-image">
-                    <div class="fg-tag">Selling Fast</div>
-                    <img src="images/BAGS/Bottega-Veneta/Bag-Bottega-Veneta-1.jpg" alt="Bottega Veneta Designer Bag" loading="lazy">
-                </div>
-                <div class="fg-product-info">
-                    <span class="fg-brand">Bottega Veneta</span>
-                    <h3 class="fg-product-title">Woven Leather Crossbody</h3>
-                    <div class="fg-product-price">$950</div>
-                    <div class="fg-product-footer">
-                        <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">
-                            DM TO BUY
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Card 2: Shoes ($600 - $1000) -->
-            <div class="fg-product-card glass-effect">
-                <div class="fg-product-image">
-                    <img src="images/SHOES/Gucci/Shoes-Gucci1.jpg" alt="Gucci Luxury Shoes" loading="lazy">
-                </div>
-                <div class="fg-product-info">
-                    <span class="fg-brand">Gucci</span>
-                    <h3 class="fg-product-title">Classic Monogram Loafers</h3>
-                    <div class="fg-product-price">$780</div>
-                    <div class="fg-product-footer">
-                        <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">
-                            DM TO BUY
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Card 3: Glasses ($400 - $600) -->
-            <div class="fg-product-card glass-effect">
-                <div class="fg-product-image">
-                    <div class="fg-tag fg-tag-new">Just Dropped</div>
-                    <img src="images/GLASSES/OffWhite/Glasses-OffWhite1.jpg" alt="Off-White Statement Glasses" loading="lazy">
-                </div>
-                <div class="fg-product-info">
-                    <span class="fg-brand">Off-White</span>
-                    <h3 class="fg-product-title">Virgil Statement Shades</h3>
-                    <div class="fg-product-price">$450</div>
-                    <div class="fg-product-footer">
-                        <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">
-                            DM TO BUY
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Card 4: Watches ($800 - $1320) -->
-            <div class="fg-product-card glass-effect">
-                <div class="fg-product-image">
-                    <img src="images/WATCHES/Patek-Philippe/Watches-PatekPhilippe1.jpg" alt="Patek Philippe Premium Watch" loading="lazy">
-                </div>
-                <div class="fg-product-info">
-                    <span class="fg-brand">Patek Philippe</span>
-                    <h3 class="fg-product-title">Nautilus Premium Edition</h3>
-                    <div class="fg-product-price">$1,250</div>
-                    <div class="fg-product-footer">
-                        <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">
-                            DM TO BUY
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Card 5: Wallets ($400 - $600) -->
-            <div class="fg-product-card glass-effect">
-                <div class="fg-product-image">
-                    <img src="images/WALLETS/Louis-Vuitton/Wallet-LV1.jpg" alt="Louis Vuitton Monogram Wallet" loading="lazy">
-                </div>
-                <div class="fg-product-info">
-                    <span class="fg-brand">Louis Vuitton</span>
-                    <h3 class="fg-product-title">Monogram Canvas Wallet</h3>
-                    <div class="fg-product-price">$520</div>
-                    <div class="fg-product-footer">
-                        <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">
-                            DM TO BUY
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        
-        <!-- Desktop Navigation Arrows -->
-        <div class="fg-carousel-nav">
-            <button class="fg-nav-arrow" id="scroll-left" aria-label="Scroll Left">←</button>
-            <button class="fg-nav-arrow" id="scroll-right" aria-label="Scroll Right">→</button>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* --- Shared Variables --- */
-    :root {
-        --fg-black: #0A0A0A;
-        --fg-white: #FFFFFF;
-        --fg-bg-tint: #F7F7F7; 
-        --fg-grey-light: #E0E0E0;
-        --fg-grey: #666666;
-    }
-
-    /* --- Section Styling --- */
-    .fg-trending-section {
-        background-color: var(--fg-bg-tint);
-        padding: 100px 0 120px 0;
-        overflow: hidden; 
-    }
-
-    .fg-trending-header {
-        text-align: center;
-        margin-bottom: 50px;
-        padding: 0 4%;
-    }
-
-    /* --- Carousel Wrapper & Scrolling --- */
-    .fg-carousel-wrapper {
-        position: relative;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .fg-carousel {
-        display: flex;
-        gap: 30px;
-        padding: 20px 4%;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory; 
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; 
-    }
-
-    .fg-carousel::-webkit-scrollbar {
-        display: none; 
-    }
-
-    /* --- Glassmorphism Product Cards --- */
-    .fg-product-card {
-        flex: 0 0 320px; 
-        scroll-snap-align: start;
-        display: flex;
-        flex-direction: column;
-        border-radius: 12px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .glass-effect {
-        background: rgba(255, 255, 255, 0.6);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        border: 1px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    }
-
-    .fg-product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-    }
-
-    /* --- Product Image Area --- */
-    .fg-product-image {
-        position: relative;
-        width: 100%;
-        height: 380px;
-        border-radius: 12px 12px 0 0;
-        overflow: hidden;
-        background-color: var(--fg-white);
-    }
-
-    .fg-product-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        transition: transform 0.6s ease;
-    }
-
-    .fg-product-card:hover .fg-product-image img {
-        transform: scale(1.05);
-    }
-
-    .fg-tag {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        background-color: var(--fg-black);
-        color: var(--fg-white);
-        font-family: var(--font-sans);
-        font-size: 0.7rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 5px 10px;
-        z-index: 2;
-    }
-
-    .fg-tag-new {
-        background-color: #FF0055; 
-    }
-
-    /* --- Product Info Area --- */
-    .fg-product-info {
-        padding: 25px 20px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-
-    .fg-brand {
-        font-family: var(--font-sans);
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--fg-grey);
-        margin-bottom: 8px;
-    }
-
-    .fg-product-title {
-        font-family: var(--font-serif);
-        font-size: 1.2rem;
-        color: var(--fg-black);
-        margin: 0 0 10px 0;
-        font-weight: 400;
-        line-height: 1.3;
-    }
-
-    /* --- Pricing Styling --- */
-    .fg-product-price {
-        font-family: var(--font-sans);
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: var(--fg-black);
-        margin-bottom: 20px;
-        letter-spacing: 0.5px;
-    }
-
-    /* --- Buy Button --- */
-    .fg-product-footer {
-        margin-top: auto; 
-    }
-
-    .fg-dm-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        background-color: transparent;
-        color: var(--fg-black);
-        border: 1px solid var(--fg-black);
-        padding: 12px 0;
-        font-family: var(--font-sans);
-        font-size: 0.85rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    .fg-dm-btn:hover {
-        background-color: var(--fg-black);
-        color: var(--fg-white);
-    }
-
-    /* --- Desktop Arrows --- */
-    .fg-carousel-nav {
-        display: flex;
-        justify-content: flex-end;
-        gap: 15px;
-        padding: 20px 4% 0 0;
-    }
-
-    .fg-nav-arrow {
-        background: transparent;
-        border: 1px solid var(--fg-grey-light);
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 1.2rem;
-        color: var(--fg-black);
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .fg-nav-arrow:hover {
-        border-color: var(--fg-black);
-        background-color: var(--fg-black);
-        color: var(--fg-white);
-    }
-
-    /* --- Responsive Adjustments --- */
-    @media (max-width: 768px) {
-        .fg-carousel {
-            gap: 15px;
-            padding: 10px 5%;
-        }
-        .fg-product-card {
-            flex: 0 0 80vw; 
-        }
-        .fg-product-image {
-            height: 320px;
-        }
-        .fg-carousel-nav {
-            display: none; 
-        }
-    }
-</style>
-
-<script>
-    // Lightweight script for desktop arrow navigation
-    document.addEventListener("DOMContentLoaded", () => {
-        const carousel = document.getElementById('product-carousel');
-        const leftBtn = document.getElementById('scroll-left');
-        const rightBtn = document.getElementById('scroll-right');
-
-        if (carousel && leftBtn && rightBtn) {
-            const scrollAmount = 350; 
-
-            leftBtn.addEventListener('click', () => {
-                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            });
-
-            rightBtn.addEventListener('click', () => {
-                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            });
-        }
-    });
-</script>
-
-
-<section class="fg-trust-section" id="authenticity">
-    <div class="fg-trust-container">
-        
-        <div class="fg-trust-content">
-            <div class="fg-trust-badge">The Omega Standard</div>
-            <h2 class="fg-trust-title">Uncompromising Quality.<br>Verified Authenticity.</h2>
-            <p class="fg-trust-desc">
-                We don't just ship boxes; we deliver an experience. Every designer piece is rigorously inspected by our specialists in our Dubai fulfillment center before it ever reaches your doorstep in the US. 
-            </p>
-            
-            <ul class="fg-trust-list">
-                <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>100% Quality Checked & Verified</span>
-                </li>
-                <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>Premium Packaging & Dustbags Included</span>
-                </li>
-                <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>Fully Tracked Expedited US Shipping</span>
-                </li>
-            </ul>
-
-            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-trust-btn">
-                Ask Us About Our Process
-            </a>
-        </div>
-
-        <div class="fg-trust-visual">
-            <div class="fg-trust-img-wrapper">
-                <img src="images/mix-Inventory/Mixinventory-2.jpg" alt="Omega Hub Quality Packaging Process" loading="lazy">
+            <div class="fg-hero-content">
+                <div class="fg-badge">The IT-List</div>
+                <h1 class="fg-title">Curated for the<br><em>Fashion Obsessed.</em></h1>
+                <p class="fg-subtitle">Discover premium designer bags, iconic shoes, and statement accessories. Elevate your aesthetic with fast, seamless US shipping.</p>
                 
-                <div class="fg-floating-card">
-                    <span class="fg-card-icon">✈️</span>
-                    <div class="fg-card-text">
-                        <strong>Dispatching Daily</strong>
-                        <span>Dubai → USA</span>
+                <div class="fg-actions">
+                    <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-btn-primary">
+                        DM TO ORDER
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="new-in.html" class="fg-btn-secondary">Explore Feed</a>
+                </div>
+                
+                <div class="fg-trust-signals">
+                    <span>🇺🇸 Free US Shipping</span>
+                    <span class="dot">•</span>
+                    <span>⭐ 5-Star Quality</span>
+                    <span class="dot">•</span>
+                    <span>🔒 Secure DM Ordering</span>
+                </div>
+            </div>
+
+            <div class="fg-hero-visuals">
+                <div class="fg-img-large">
+                    <img src="images/mix-Inventory/Mixinventory-1.jpg" alt="Omega Hub Premium Fashion Collection">
+                </div>
+                <div class="fg-img-stack">
+                    <div class="fg-img-small">
+                        <img src="images/BAGS/Chanel/Celine-1.jpg" alt="Designer Chanel Bag">
+                    </div>
+                    <div class="fg-img-small">
+                        <img src="images/SHOES/Christian-Louboutin/Shoes-ChristianLouboutin1.jpg" alt="Christian Louboutin Red Bottoms">
                     </div>
                 </div>
             </div>
+
         </div>
+    </section>
 
-    </div>
-</section>
+    <style>
+        /* --- Hero Section CSS --- */
+        .fg-hero-wrapper {
+            background-color: var(--fg-off-white);
+            padding: 60px 4%;
+            border-bottom: 1px solid var(--fg-border);
+        }
 
-<style>
-    /* --- Shared Variables --- */
-    :root {
-        --fg-black: #0A0A0A;
-        --fg-white: #FFFFFF;
-        --fg-grey-light: #A0A0A0;
-        --fg-accent: #FF0055;
-    }
+        .fg-hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
 
-    /* --- Section Styling (Dark Mode) --- */
-    .fg-trust-section {
-        background-color: var(--fg-black);
-        color: var(--fg-white);
-        padding: 120px 4%;
-        overflow: hidden;
-    }
-
-    .fg-trust-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: center;
-    }
-
-    /* --- Left Content --- */
-    .fg-trust-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .fg-trust-badge {
-        font-family: var(--font-sans);
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--fg-grey-light);
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .fg-trust-badge::before {
-        content: '';
-        display: inline-block;
-        width: 30px;
-        height: 1px;
-        background-color: var(--fg-grey-light);
-    }
-
-    .fg-trust-title {
-        font-family: var(--font-serif);
-        font-size: 3.5rem;
-        line-height: 1.1;
-        margin: 0 0 30px 0;
-        letter-spacing: -1px;
-    }
-
-    .fg-trust-desc {
-        font-family: var(--font-sans);
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: var(--fg-grey-light);
-        margin: 0 0 40px 0;
-        max-width: 90%;
-    }
-
-    /* --- Trust List --- */
-    .fg-trust-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 40px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .fg-trust-list li {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        font-family: var(--font-sans);
-        font-size: 1rem;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-    }
-
-    .fg-trust-list svg {
-        width: 20px;
-        height: 20px;
-        color: var(--fg-white); /* High contrast checkmark */
-        flex-shrink: 0;
-    }
-
-    /* --- CTA Button --- */
-    .fg-trust-btn {
-        display: inline-block;
-        align-self: flex-start;
-        background-color: var(--fg-white);
-        color: var(--fg-black);
-        padding: 16px 32px;
-        font-family: var(--font-sans);
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-decoration: none;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .fg-trust-btn:hover {
-        background-color: var(--fg-grey-light);
-        transform: translateY(-3px);
-    }
-
-    /* --- Right Visual & Floating Card --- */
-    .fg-trust-visual {
-        position: relative;
-    }
-
-    .fg-trust-img-wrapper {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 4 / 5;
-        overflow: hidden;
-    }
-
-    .fg-trust-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.9; /* Slight fade to match the dark aesthetic */
-        transition: transform 0.8s ease;
-    }
-
-    .fg-trust-visual:hover .fg-trust-img-wrapper img {
-        transform: scale(1.05);
-    }
-
-    /* Floating Trust Card */
-    .fg-floating-card {
-        position: absolute;
-        bottom: -20px;
-        left: -30px;
-        background-color: var(--fg-white);
-        color: var(--fg-black);
-        padding: 20px 25px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        z-index: 2;
-    }
-
-    .fg-card-icon {
-        font-size: 2rem;
-    }
-
-    .fg-card-text {
-        display: flex;
-        flex-direction: column;
-        font-family: var(--font-sans);
-    }
-
-    .fg-card-text strong {
-        font-size: 1rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .fg-card-text span {
-        font-size: 0.85rem;
-        color: var(--fg-grey-light);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    /* --- Responsive Breakpoints --- */
-    @media (max-width: 1024px) {
-        .fg-trust-title { font-size: 2.8rem; }
-        .fg-trust-container { gap: 50px; }
-    }
-
-    @media (max-width: 768px) {
-        .fg-trust-section { padding: 80px 5%; }
-        .fg-trust-container { grid-template-columns: 1fr; gap: 60px; }
-        
-        .fg-trust-title { font-size: 2.5rem; }
-        .fg-trust-desc { max-width: 100%; }
-        .fg-trust-btn { width: 100%; text-align: center; }
-        
-        .fg-floating-card {
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
+        .fg-hero-content {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-    }
-</style>
 
-<!-- ==========================================
-     SECTION 5: SOCIAL PROOF & REVIEWS
-=========================================== -->
-<section class="fg-reviews-section">
-    <div class="fg-reviews-header">
-        <h2 class="fg-section-title">The Verdict</h2>
-        <p class="fg-section-subtitle">Real experiences from our US clientele.</p>
-        
-        <!-- Aggregate Rating Summary -->
-        <div class="fg-aggregate-rating">
-            <div class="fg-stars">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <span>4.9/5 Average based on 1,200+ Reviews</span>
-        </div>
-    </div>
-
-    <!-- Review Carousel Container -->
-    <div class="fg-reviews-container">
-        <div class="fg-reviews-carousel" id="review-carousel">
-            
-            <!-- Review 1 -->
-            <div class="fg-review-card">
-                <div class="fg-review-top">
-                    <div class="fg-reviewer-avatar" style="background-color: #EFEFEF;">S</div>
-                    <div class="fg-reviewer-info">
-                        <span class="fg-reviewer-name">Sarah M. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
-                        <span class="fg-reviewer-loc">New York, NY</span>
-                    </div>
-                </div>
-                <div class="fg-review-stars">
-                    ★★★★★
-                </div>
-                <p class="fg-review-text">"Absolutely obsessed. The packaging was stunning, it came with the dustbag, and shipping to NYC took exactly 4 days. Will definitely be ordering my next pair of heels from here."</p>
-                <div class="fg-review-product">
-                    <span>Purchased:</span> Luxury Designer Shoes
-                </div>
-            </div>
-
-            <!-- Review 2 -->
-            <div class="fg-review-card">
-                <div class="fg-review-top">
-                    <div class="fg-reviewer-avatar" style="background-color: #EFEFEF;">C</div>
-                    <div class="fg-reviewer-info">
-                        <span class="fg-reviewer-name">Chloe T. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
-                        <span class="fg-reviewer-loc">Los Angeles, CA</span>
-                    </div>
-                </div>
-                <div class="fg-review-stars">
-                    ★★★★★
-                </div>
-                <p class="fg-review-text">"The quality is unmatched. I was hesitant at first about ordering through IG DMs, but the team was so professional and the bag is flawless. Best customer service!"</p>
-                <div class="fg-review-product">
-                    <span>Purchased:</span> Premium Designer Bag
-                </div>
-            </div>
-
-            <!-- Review 3 -->
-            <div class="fg-review-card">
-                <div class="fg-review-top">
-                    <div class="fg-reviewer-avatar" style="background-color: #EFEFEF;">J</div>
-                    <div class="fg-reviewer-info">
-                        <span class="fg-reviewer-name">Jessica R. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
-                        <span class="fg-reviewer-loc">Miami, FL</span>
-                    </div>
-                </div>
-                <div class="fg-review-stars">
-                    ★★★★★
-                </div>
-                <p class="fg-review-text">"So chic and exactly as described. The glasses came in pristine condition with all the proper boxing. The quality check video they sent before shipping was a huge plus."</p>
-                <div class="fg-review-product">
-                    <span>Purchased:</span> Statement Sunglasses
-                </div>
-            </div>
-
-            <!-- Review 4 -->
-            <div class="fg-review-card">
-                <div class="fg-review-top">
-                    <div class="fg-reviewer-avatar" style="background-color: #EFEFEF;">A</div>
-                    <div class="fg-reviewer-info">
-                        <span class="fg-reviewer-name">Ashley K. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
-                        <span class="fg-reviewer-loc">Chicago, IL</span>
-                    </div>
-                </div>
-                <div class="fg-review-stars">
-                    ★★★★★
-                </div>
-                <p class="fg-review-text">"Incredible. I've bought luxury items for years, and the craftsmanship here is identical to the boutiques. My watch arrived safely packed and perfectly timed."</p>
-                <div class="fg-review-product">
-                    <span>Purchased:</span> Premium Designer Watch
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Navigation Arrows -->
-        <div class="fg-review-nav">
-            <button class="fg-review-arrow" id="rev-scroll-left" aria-label="Previous Review">←</button>
-            <button class="fg-review-arrow" id="rev-scroll-right" aria-label="Next Review">→</button>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* --- Shared Variables --- */
-    :root {
-        --fg-black: #0A0A0A;
-        --fg-white: #FFFFFF;
-        --fg-grey: #666666;
-        --fg-border: #EAEAEA;
-        --fg-gold: #D4AF37; /* Google-style star color */
-        --fg-green: #00A650; /* Verified Buyer check color */
-    }
-
-    /* --- Section Styling --- */
-    .fg-reviews-section {
-        background-color: var(--fg-white);
-        padding: 100px 0;
-        border-bottom: 1px solid var(--fg-border);
-    }
-
-    .fg-reviews-header {
-        text-align: center;
-        margin-bottom: 50px;
-        padding: 0 4%;
-    }
-
-    /* Aggregate Rating */
-    .fg-aggregate-rating {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        margin-top: 20px;
-    }
-
-    .fg-stars {
-        display: flex;
-        gap: 4px;
-        color: var(--fg-black); /* Keeping stars monochromatic for fashion vibe */
-    }
-
-    .fg-stars svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .fg-aggregate-rating span {
-        font-family: var(--font-sans);
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--fg-grey);
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-    }
-
-    /* --- Carousel Layout --- */
-    .fg-reviews-container {
-        position: relative;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .fg-reviews-carousel {
-        display: flex;
-        gap: 25px;
-        padding: 20px 4%;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-
-    .fg-reviews-carousel::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* --- Review Card --- */
-    .fg-review-card {
-        flex: 0 0 400px;
-        scroll-snap-align: center;
-        background-color: var(--fg-white);
-        border: 1px solid var(--fg-border);
-        padding: 35px 30px;
-        display: flex;
-        flex-direction: column;
-        transition: box-shadow 0.3s ease;
-    }
-
-    .fg-review-card:hover {
-        box-shadow: 0 15px 35px rgba(0,0,0,0.04);
-    }
-
-    /* Card Top: Avatar & Name */
-    .fg-review-top {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 15px;
-    }
-
-    .fg-reviewer-avatar {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: var(--font-serif);
-        font-size: 1.2rem;
-        color: var(--fg-black);
-        background-color: #F5F5F5;
-        flex-shrink: 0;
-    }
-
-    .fg-reviewer-info {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .fg-reviewer-name {
-        font-family: var(--font-sans);
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: var(--fg-black);
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .fg-verified-icon {
-        width: 14px;
-        height: 14px;
-        color: var(--fg-green);
-    }
-
-    .fg-reviewer-loc {
-        font-family: var(--font-sans);
-        font-size: 0.75rem;
-        color: var(--fg-grey);
-    }
-
-    /* Card Body: Stars & Text */
-    .fg-review-stars {
-        color: var(--fg-gold); /* Classic Google gold */
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-        letter-spacing: 2px;
-    }
-
-    .fg-review-text {
-        font-family: var(--font-serif);
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: var(--fg-black);
-        margin: 0 0 25px 0;
-        font-style: italic;
-        flex-grow: 1;
-    }
-
-    /* Card Footer: Product Link */
-    .fg-review-product {
-        font-family: var(--font-sans);
-        font-size: 0.8rem;
-        color: var(--fg-black);
-        font-weight: 600;
-        padding-top: 15px;
-        border-top: 1px solid var(--fg-border);
-    }
-
-    .fg-review-product span {
-        color: var(--fg-grey);
-        font-weight: 400;
-        margin-right: 5px;
-    }
-
-    /* --- Navigation Arrows --- */
-    .fg-review-nav {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 30px;
-    }
-
-    .fg-review-arrow {
-        background: transparent;
-        border: 1px solid var(--fg-border);
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 1.2rem;
-        color: var(--fg-black);
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .fg-review-arrow:hover {
-        border-color: var(--fg-black);
-        background-color: var(--fg-black);
-        color: var(--fg-white);
-    }
-
-    /* --- Responsive Breakpoints --- */
-    @media (max-width: 768px) {
-        .fg-reviews-carousel {
-            gap: 15px;
-            padding: 10px 5%;
-        }
-        .fg-review-card {
-            flex: 0 0 85vw; /* Fills most of the screen on mobile */
-            padding: 25px 20px;
-        }
-        .fg-review-text {
-            font-size: 1rem;
-        }
-        .fg-review-nav {
-            display: none; /* Hide arrows on mobile, rely on swiping */
-        }
-    }
-</style>
-
-<script>
-    // Script for desktop arrow navigation in the reviews section
-    document.addEventListener("DOMContentLoaded", () => {
-        const revCarousel = document.getElementById('review-carousel');
-        const revLeftBtn = document.getElementById('rev-scroll-left');
-        const revRightBtn = document.getElementById('rev-scroll-right');
-
-        if (revCarousel && revLeftBtn && revRightBtn) {
-            // Scroll amount = width of one review card + gap roughly
-            const revScrollAmount = 425; 
-
-            revLeftBtn.addEventListener('click', () => {
-                revCarousel.scrollBy({ left: -revScrollAmount, behavior: 'smooth' });
-            });
-
-            revRightBtn.addEventListener('click', () => {
-                revCarousel.scrollBy({ left: revScrollAmount, behavior: 'smooth' });
-            });
-        }
-    });
-</script>
-
-<!-- ==========================================
-     SECTION 6: SHOP THE FEED (INSTAGRAM)
-=========================================== -->
-<section class="fg-ig-section">
-    <div class="fg-ig-container">
-        
-        <!-- Section Header -->
-        <div class="fg-ig-header">
-            <h2 class="fg-section-title">On The Grid</h2>
-            <p class="fg-section-subtitle">
-                Join the ultimate fashion community. Follow 
-                <a href="https://instagram.com/omegahubonline" target="_blank" class="fg-ig-handle">@OMEGAHUBONLINE</a>
-            </p>
-        </div>
-
-        <!-- Instagram 4-Image Grid -->
-        <div class="fg-ig-grid">
-            
-            <!-- IG Item 1 -->
-            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
-                <img src="images/mix-Inventory/Mixinventory-3.jpg" alt="Omega Hub Lifestyle" loading="lazy">
-                <div class="fg-ig-overlay">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    <span>Shop via DM</span>
-                </div>
-            </a>
-
-            <!-- IG Item 2 -->
-            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
-                <img src="images/SHIRTS & Dresses_/Balenciaga/Shirt&Dress-Balenciaga-1.jpg" alt="Balenciaga Apparel" loading="lazy">
-                <div class="fg-ig-overlay">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    <span>Shop via DM</span>
-                </div>
-            </a>
-
-            <!-- IG Item 3 -->
-            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
-                <img src="images/mix-Inventory/Mixinventory-4.jpg" alt="Designer Accessories Stack" loading="lazy">
-                <div class="fg-ig-overlay">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    <span>Shop via DM</span>
-                </div>
-            </a>
-
-            <!-- IG Item 4 -->
-            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
-                <img src="images/BAGS/Dior/Bag-Chloe-1.jpg" alt="Premium Designer Bag" loading="lazy">
-                <div class="fg-ig-overlay">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    <span>Shop via DM</span>
-                </div>
-            </a>
-
-        </div>
-
-        <!-- Call to Action -->
-        <div class="fg-ig-footer">
-            <a href="https://instagram.com/omegahubonline" target="_blank" class="fg-ig-btn">
-                Follow Us
-            </a>
-        </div>
-
-    </div>
-</section>
-
-<style>
-    /* --- Shared Variables --- */
-    :root {
-        --fg-black: #0A0A0A;
-        --fg-white: #FFFFFF;
-        --fg-off-white: #FAFAFA;
-        --fg-grey: #666666;
-    }
-
-    /* --- Section Layout --- */
-    .fg-ig-section {
-        background-color: var(--fg-off-white);
-        padding: 100px 4%;
-    }
-
-    .fg-ig-container {
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    /* --- Header & Typography --- */
-    .fg-ig-header {
-        text-align: center;
-        margin-bottom: 50px;
-    }
-
-    .fg-ig-handle {
-        color: var(--fg-black);
-        font-weight: 700;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .fg-ig-handle:hover {
-        color: #FF0055; /* The signature high-energy pink */
-    }
-
-    /* --- Instagram Grid Layout --- */
-    .fg-ig-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px; /* Clean, modern spacing */
-        margin-bottom: 50px;
-    }
-
-    /* --- Instagram Items --- */
-    .fg-ig-item {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 1 / 1; /* Perfect square like Instagram */
-        overflow: hidden;
-        background-color: #EAEAEA;
-        display: block;
-        border-radius: 4px;
-    }
-
-    .fg-ig-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* --- Dark Overlay on Hover --- */
-    .fg-ig-overlay {
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        color: var(--fg-white);
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    .fg-ig-overlay svg {
-        width: 32px;
-        height: 32px;
-        transform: translateY(15px);
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .fg-ig-overlay span {
-        font-family: var(--font-sans);
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        transform: translateY(15px);
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* Hover Animations */
-    .fg-ig-item:hover img {
-        transform: scale(1.08);
-    }
-
-    .fg-ig-item:hover .fg-ig-overlay {
-        opacity: 1;
-    }
-
-    .fg-ig-item:hover .fg-ig-overlay svg,
-    .fg-ig-item:hover .fg-ig-overlay span {
-        transform: translateY(0);
-    }
-
-    /* --- Footer Action Button --- */
-    .fg-ig-footer {
-        text-align: center;
-    }
-
-    .fg-ig-btn {
-        display: inline-block;
-        background-color: transparent;
-        color: var(--fg-black);
-        border: 2px solid var(--fg-black);
-        padding: 14px 40px;
-        font-family: var(--font-sans);
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    .fg-ig-btn:hover {
-        background-color: var(--fg-black);
-        color: var(--fg-white);
-    }
-
-    /* --- Responsive Breakpoints --- */
-    @media (max-width: 1024px) {
-        .fg-ig-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .fg-ig-section {
-            padding: 80px 5%;
-        }
-        .fg-ig-grid {
-            grid-template-columns: repeat(2, 1fr); /* Keep 2x2 grid on mobile for the IG feel */
-            gap: 10px;
-        }
-        .fg-ig-overlay svg {
-            width: 24px;
-            height: 24px;
-        }
-        .fg-ig-overlay span {
+        .fg-badge {
+            display: inline-block;
+            font-family: var(--font-sans);
             font-size: 0.75rem;
-            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--fg-grey);
+            margin-bottom: 20px;
         }
-    }
-</style>
 
+        .fg-title {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 5vw, 4.5rem); /* Fluid typography */
+            line-height: 1.05;
+            color: var(--fg-black);
+            margin: 0 0 25px 0;
+            letter-spacing: -1px;
+        }
 
+        .fg-title em { font-style: italic; color: var(--fg-grey); }
 
+        .fg-subtitle {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--fg-grey);
+            margin: 0 0 40px 0;
+            max-width: 90%;
+        }
 
+        .fg-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        }
 
+        .fg-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--fg-black);
+            color: var(--fg-white);
+            padding: 16px 32px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
+        .fg-btn-primary:hover {
+            background-color: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
 
+        .fg-btn-secondary {
+            display: inline-block;
+            color: var(--fg-black);
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            padding: 16px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
 
+        .fg-btn-secondary:hover { border-color: var(--fg-black); }
 
+        .fg-trust-signals {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 15px;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--fg-grey);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .dot { color: #CCC; }
 
-<div id="footer-placeholder"></div>
+        .fg-hero-visuals {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 20px;
+            height: 650px;
+            opacity: 0;
+            animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        }
 
-<script src="footer.js"></script>
+        .fg-img-large, .fg-img-small {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #EFEFEF;
+        }
+
+        .fg-img-large img, .fg-img-small img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.7s ease;
+        }
+
+        .fg-img-large:hover img, .fg-img-small:hover img { transform: scale(1.05); }
+
+        .fg-img-stack {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            height: 100%;
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInRight {
+            0% { opacity: 0; transform: translateX(40px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @media (max-width: 1024px) {
+            .fg-hero-visuals { height: 500px; }
+        }
+
+        @media (max-width: 768px) {
+            .fg-hero-wrapper { padding: 40px 5%; }
+            .fg-hero-container { grid-template-columns: 1fr; gap: 40px; }
+            .fg-subtitle { max-width: 100%; }
+            .fg-hero-visuals { 
+                grid-template-columns: 1fr; 
+                height: auto; 
+                gap: 15px; 
+            }
+            .fg-img-large { height: 400px; }
+            .fg-img-stack { 
+                grid-template-columns: 1fr 1fr; 
+                grid-template-rows: auto; 
+                height: 200px; 
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .fg-actions { flex-direction: column; width: 100%; }
+            .fg-btn-primary, .fg-btn-secondary { width: 100%; text-align: center; }
+            .fg-img-large { height: 300px; }
+            .fg-img-stack { height: 150px; }
+            .dot { display: none; } /* Hide dots on very small screens for better wrapping */
+        }
+    </style>
+
+    <section class="fg-collections-section">
+        <div class="fg-collections-container">
+            <div class="fg-section-header">
+                <h2 class="fg-section-title">The Collections</h2>
+                <p class="fg-section-subtitle">Curated categories for the modern wardrobe.</p>
+            </div>
+
+            <div class="fg-collections-grid">
+                <a href="bags.html" class="fg-category-card">
+                    <div class="fg-category-img-wrapper">
+                        <img src="images/BAGS/Hermes/Bag-Hermes1.jpg" alt="Premium Designer Bags" loading="lazy">
+                    </div>
+                    <div class="fg-category-content">
+                        <h3 class="fg-category-name">Designer Bags</h3>
+                        <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </div>
+                </a>
+
+                <a href="shoes.html" class="fg-category-card">
+                    <div class="fg-category-img-wrapper">
+                        <img src="images/SHOES/Jimmy-Choo/Shoes-JimmyChoo1.jpg" alt="Luxury Shoes and Heels" loading="lazy">
+                    </div>
+                    <div class="fg-category-content">
+                        <h3 class="fg-category-name">Luxury Shoes</h3>
+                        <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </div>
+                </a>
+
+                <a href="watches.html" class="fg-category-card">
+                    <div class="fg-category-img-wrapper">
+                        <img src="images/WATCHES/Cartier/Watches-cartier1.jpg" alt="Premium Designer Watches" loading="lazy">
+                    </div>
+                    <div class="fg-category-content">
+                        <h3 class="fg-category-name">Premium Watches</h3>
+                        <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </div>
+                </a>
+
+                <a href="sale.html" class="fg-category-card">
+                    <div class="fg-category-img-wrapper">
+                        <img src="images/GLASSES/Prada/Glasses-Prada1.jpg" alt="Statement Sunglasses" loading="lazy">
+                    </div>
+                    <div class="fg-category-content">
+                        <h3 class="fg-category-name">Statement Glasses</h3>
+                        <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* --- Collections Section CSS --- */
+        .fg-collections-section { padding: 100px 5%; background-color: var(--fg-white); }
+        .fg-collections-container { max-width: 1400px; margin: 0 auto; }
+        .fg-section-header { text-align: center; margin-bottom: 60px; }
+        
+        .fg-section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 4vw, 3rem);
+            color: var(--fg-black);
+            margin: 0 0 10px 0;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        .fg-section-subtitle {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: var(--fg-grey);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .fg-collections-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .fg-category-card { display: flex; flex-direction: column; text-decoration: none; }
+        
+        .fg-category-img-wrapper {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            background-color: #F5F5F5;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .fg-category-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fg-category-img-wrapper::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.4s ease;
+        }
+
+        .fg-category-card:hover .fg-category-img-wrapper img { transform: scale(1.05); }
+        .fg-category-card:hover .fg-category-img-wrapper::after { opacity: 1; }
+
+        .fg-category-content { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        
+        .fg-category-name {
+            font-family: var(--font-serif); font-size: 1.5rem; color: var(--fg-black);
+            margin: 0 0 10px 0; font-weight: 400;
+        }
+
+        .fg-category-link {
+            font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 1.5px; color: var(--fg-grey);
+            display: flex; align-items: center; gap: 5px; transition: color 0.3s ease;
+        }
+
+        .fg-category-link svg { width: 16px; height: 16px; transition: transform 0.3s ease; }
+        .fg-category-card:hover .fg-category-link { color: var(--fg-black); }
+        .fg-category-card:hover .fg-category-link svg { transform: translateX(4px); }
+
+        @media (max-width: 1024px) {
+            .fg-collections-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 20px; }
+        }
+
+        @media (max-width: 600px) {
+            .fg-collections-section { padding: 60px 5%; }
+            .fg-collections-grid { grid-template-columns: 1fr; gap: 50px; }
+            .fg-category-card { max-width: 450px; margin: 0 auto; width: 100%; } /* Prevents giant cards on tablet */
+            .fg-category-img-wrapper { aspect-ratio: 4 / 5; }
+        }
+    </style>
+
+    <section class="fg-trending-section" id="trending">
+        <div class="fg-trending-header">
+            <h2 class="fg-section-title">Trending Now</h2>
+            <p class="fg-section-subtitle">The pieces dominating our DMs right now.</p>
+        </div>
+
+        <div class="fg-carousel-wrapper">
+            <div class="fg-carousel" id="product-carousel">
+                <div class="fg-product-card glass-effect">
+                    <div class="fg-product-image">
+                        <div class="fg-tag">Selling Fast</div>
+                        <img src="images/BAGS/Bottega-Veneta/Bag-Bottega-Veneta-1.jpg" alt="Bottega Veneta Designer Bag" loading="lazy">
+                    </div>
+                    <div class="fg-product-info">
+                        <span class="fg-brand">Bottega Veneta</span>
+                        <h3 class="fg-product-title">Woven Leather Crossbody</h3>
+                        <div class="fg-product-price">$950</div>
+                        <div class="fg-product-footer">
+                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fg-product-card glass-effect">
+                    <div class="fg-product-image">
+                        <img src="images/SHOES/Gucci/Shoes-Gucci1.jpg" alt="Gucci Luxury Shoes" loading="lazy">
+                    </div>
+                    <div class="fg-product-info">
+                        <span class="fg-brand">Gucci</span>
+                        <h3 class="fg-product-title">Classic Monogram Loafers</h3>
+                        <div class="fg-product-price">$780</div>
+                        <div class="fg-product-footer">
+                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fg-product-card glass-effect">
+                    <div class="fg-product-image">
+                        <div class="fg-tag fg-tag-new">Just Dropped</div>
+                        <img src="images/GLASSES/OffWhite/Glasses-OffWhite1.jpg" alt="Off-White Statement Glasses" loading="lazy">
+                    </div>
+                    <div class="fg-product-info">
+                        <span class="fg-brand">Off-White</span>
+                        <h3 class="fg-product-title">Virgil Statement Shades</h3>
+                        <div class="fg-product-price">$450</div>
+                        <div class="fg-product-footer">
+                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fg-product-card glass-effect">
+                    <div class="fg-product-image">
+                        <img src="images/WATCHES/Patek-Philippe/Watches-PatekPhilippe1.jpg" alt="Patek Philippe Premium Watch" loading="lazy">
+                    </div>
+                    <div class="fg-product-info">
+                        <span class="fg-brand">Patek Philippe</span>
+                        <h3 class="fg-product-title">Nautilus Premium Edition</h3>
+                        <div class="fg-product-price">$1,250</div>
+                        <div class="fg-product-footer">
+                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fg-product-card glass-effect">
+                    <div class="fg-product-image">
+                        <img src="images/WALLETS/Louis-Vuitton/Wallet-LV1.jpg" alt="Louis Vuitton Monogram Wallet" loading="lazy">
+                    </div>
+                    <div class="fg-product-info">
+                        <span class="fg-brand">Louis Vuitton</span>
+                        <h3 class="fg-product-title">Monogram Canvas Wallet</h3>
+                        <div class="fg-product-price">$520</div>
+                        <div class="fg-product-footer">
+                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fg-carousel-nav">
+                <button class="fg-nav-arrow" id="scroll-left" aria-label="Scroll Left">←</button>
+                <button class="fg-nav-arrow" id="scroll-right" aria-label="Scroll Right">→</button>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* --- Trending Section CSS --- */
+        .fg-trending-section { background-color: var(--fg-bg-tint); padding: 100px 0 120px 0; overflow: hidden; }
+        .fg-trending-header { text-align: center; margin-bottom: 50px; padding: 0 5%; }
+        .fg-carousel-wrapper { position: relative; max-width: 1400px; margin: 0 auto; }
+        
+        .fg-carousel {
+            display: flex; gap: 30px; padding: 20px 5%; overflow-x: auto;
+            scroll-snap-type: x mandatory; scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch; scrollbar-width: none; 
+        }
+        .fg-carousel::-webkit-scrollbar { display: none; }
+
+        .fg-product-card {
+            flex: 0 0 320px; scroll-snap-align: start; display: flex; flex-direction: column;
+            border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.8); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .fg-product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); }
+
+        .fg-product-image { position: relative; width: 100%; height: 380px; border-radius: 12px 12px 0 0; overflow: hidden; background-color: var(--fg-white); }
+        .fg-product-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s ease; }
+        .fg-product-card:hover .fg-product-image img { transform: scale(1.05); }
+
+        .fg-tag {
+            position: absolute; top: 15px; left: 15px; background-color: var(--fg-black); color: var(--fg-white);
+            font-family: var(--font-sans); font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1px; padding: 5px 10px; z-index: 2;
+        }
+        .fg-tag-new { background-color: var(--fg-accent); }
+
+        .fg-product-info { padding: 25px 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .fg-brand { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--fg-grey); margin-bottom: 8px; }
+        .fg-product-title { font-family: var(--font-serif); font-size: 1.2rem; color: var(--fg-black); margin: 0 0 10px 0; font-weight: 400; line-height: 1.3; }
+        .fg-product-price { font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; color: var(--fg-black); margin-bottom: 20px; letter-spacing: 0.5px; }
+        
+        .fg-product-footer { margin-top: auto; }
+        .fg-dm-btn {
+            display: block; width: 100%; text-align: center; background-color: transparent; color: var(--fg-black);
+            border: 1px solid var(--fg-black); padding: 12px 0; font-family: var(--font-sans); font-size: 0.85rem;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none; transition: all 0.3s ease;
+        }
+        .fg-dm-btn:hover { background-color: var(--fg-black); color: var(--fg-white); }
+
+        .fg-carousel-nav { display: flex; justify-content: flex-end; gap: 15px; padding: 20px 5% 0 0; }
+        .fg-nav-arrow {
+            background: transparent; border: 1px solid var(--fg-grey-light); width: 45px; height: 45px; border-radius: 50%;
+            cursor: pointer; font-size: 1.2rem; color: var(--fg-black); transition: all 0.3s ease; display: flex; align-items: center; justify-content: center;
+        }
+        .fg-nav-arrow:hover { border-color: var(--fg-black); background-color: var(--fg-black); color: var(--fg-white); }
+
+        @media (max-width: 768px) {
+            .fg-carousel { gap: 15px; padding: 10px 5%; }
+            .fg-product-card { flex: 0 0 85vw; }
+            .fg-product-image { height: 320px; }
+            .fg-carousel-nav { display: none; }
+        }
+    </style>
+
+    <section class="fg-trust-section" id="authenticity">
+        <div class="fg-trust-container">
+            <div class="fg-trust-content">
+                <div class="fg-trust-badge">The Omega Standard</div>
+                <h2 class="fg-trust-title">Uncompromising Quality.<br>Verified Authenticity.</h2>
+                <p class="fg-trust-desc">
+                    We don't just ship boxes; we deliver an experience. Every designer piece is rigorously inspected by our specialists in our Dubai fulfillment center before it ever reaches your doorstep in the US. 
+                </p>
+                <ul class="fg-trust-list">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>100% Quality Checked & Verified</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Premium Packaging & Dustbags Included</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Fully Tracked Expedited US Shipping</span></li>
+                </ul>
+                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-trust-btn">Ask Us About Our Process</a>
+            </div>
+
+            <div class="fg-trust-visual">
+                <div class="fg-trust-img-wrapper">
+                    <img src="images/mix-Inventory/Mixinventory-2.jpg" alt="Omega Hub Quality Packaging Process" loading="lazy">
+                    <div class="fg-floating-card">
+                        <span class="fg-card-icon">✈️</span>
+                        <div class="fg-card-text">
+                            <strong>Dispatching Daily</strong>
+                            <span>Dubai → USA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* --- Trust Section CSS --- */
+        .fg-trust-section { background-color: var(--fg-black); color: var(--fg-white); padding: 120px 5%; overflow: hidden; }
+        .fg-trust-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        
+        .fg-trust-content { display: flex; flex-direction: column; }
+        .fg-trust-badge { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--fg-grey-light); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .fg-trust-badge::before { content: ''; display: inline-block; width: 30px; height: 1px; background-color: var(--fg-grey-light); }
+        .fg-trust-title { font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; margin: 0 0 30px 0; letter-spacing: -1px; }
+        .fg-trust-desc { font-family: var(--font-sans); font-size: 1.1rem; line-height: 1.7; color: var(--fg-grey-light); margin: 0 0 40px 0; max-width: 90%; }
+        
+        .fg-trust-list { list-style: none; padding: 0; margin: 0 0 40px 0; display: flex; flex-direction: column; gap: 15px; }
+        .fg-trust-list li { display: flex; align-items: center; gap: 15px; font-family: var(--font-sans); font-size: 1rem; font-weight: 400; letter-spacing: 0.5px; }
+        .fg-trust-list svg { width: 20px; height: 20px; color: var(--fg-white); flex-shrink: 0; }
+        
+        .fg-trust-btn { display: inline-block; align-self: flex-start; background-color: var(--fg-white); color: var(--fg-black); padding: 16px 32px; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: transform 0.3s ease, background-color 0.3s ease; }
+        .fg-trust-btn:hover { background-color: var(--fg-grey-light); transform: translateY(-3px); }
+
+        .fg-trust-visual { position: relative; width: 100%; }
+        .fg-trust-img-wrapper { position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; }
+        .fg-trust-img-wrapper img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: transform 0.8s ease; }
+        .fg-trust-visual:hover .fg-trust-img-wrapper img { transform: scale(1.05); }
+
+        .fg-floating-card { position: absolute; bottom: -20px; left: -30px; background-color: var(--fg-white); color: var(--fg-black); padding: 20px 25px; display: flex; align-items: center; gap: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); z-index: 2; width: max-content; }
+        .fg-card-icon { font-size: 2rem; }
+        .fg-card-text { display: flex; flex-direction: column; font-family: var(--font-sans); }
+        .fg-card-text strong { font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .fg-card-text span { font-size: 0.85rem; color: var(--fg-grey); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        @media (max-width: 1024px) { .fg-trust-container { gap: 50px; } }
+        @media (max-width: 768px) {
+            .fg-trust-section { padding: 80px 5%; }
+            .fg-trust-container { grid-template-columns: 1fr; gap: 60px; }
+            .fg-trust-desc { max-width: 100%; }
+            .fg-trust-btn { width: 100%; text-align: center; }
+            .fg-floating-card {
+                bottom: 20px; left: 5%; right: 5%; width: 90%; /* Forces card to fit inside mobile view safely */
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <section class="fg-reviews-section">
+        <div class="fg-reviews-header">
+            <h2 class="fg-section-title">The Verdict</h2>
+            <p class="fg-section-subtitle">Real experiences from our US clientele.</p>
+            <div class="fg-aggregate-rating">
+                <div class="fg-stars">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <span>4.9/5 Average based on 1,200+ Reviews</span>
+            </div>
+        </div>
+
+        <div class="fg-reviews-container">
+            <div class="fg-reviews-carousel" id="review-carousel">
+                <div class="fg-review-card">
+                    <div class="fg-review-top">
+                        <div class="fg-reviewer-avatar">S</div>
+                        <div class="fg-reviewer-info">
+                            <span class="fg-reviewer-name">Sarah M. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+                            <span class="fg-reviewer-loc">New York, NY</span>
+                        </div>
+                    </div>
+                    <div class="fg-review-stars">★★★★★</div>
+                    <p class="fg-review-text">"Absolutely obsessed. The packaging was stunning, it came with the dustbag, and shipping to NYC took exactly 4 days. Will definitely be ordering my next pair of heels from here."</p>
+                    <div class="fg-review-product"><span>Purchased:</span> Luxury Designer Shoes</div>
+                </div>
+
+                <div class="fg-review-card">
+                    <div class="fg-review-top">
+                        <div class="fg-reviewer-avatar">C</div>
+                        <div class="fg-reviewer-info">
+                            <span class="fg-reviewer-name">Chloe T. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+                            <span class="fg-reviewer-loc">Los Angeles, CA</span>
+                        </div>
+                    </div>
+                    <div class="fg-review-stars">★★★★★</div>
+                    <p class="fg-review-text">"The quality is unmatched. I was hesitant at first about ordering through IG DMs, but the team was so professional and the bag is flawless. Best customer service!"</p>
+                    <div class="fg-review-product"><span>Purchased:</span> Premium Designer Bag</div>
+                </div>
+
+                <div class="fg-review-card">
+                    <div class="fg-review-top">
+                        <div class="fg-reviewer-avatar">J</div>
+                        <div class="fg-reviewer-info">
+                            <span class="fg-reviewer-name">Jessica R. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+                            <span class="fg-reviewer-loc">Miami, FL</span>
+                        </div>
+                    </div>
+                    <div class="fg-review-stars">★★★★★</div>
+                    <p class="fg-review-text">"So chic and exactly as described. The glasses came in pristine condition with all the proper boxing. The quality check video they sent before shipping was a huge plus."</p>
+                    <div class="fg-review-product"><span>Purchased:</span> Statement Sunglasses</div>
+                </div>
+
+                <div class="fg-review-card">
+                    <div class="fg-review-top">
+                        <div class="fg-reviewer-avatar">A</div>
+                        <div class="fg-reviewer-info">
+                            <span class="fg-reviewer-name">Ashley K. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+                            <span class="fg-reviewer-loc">Chicago, IL</span>
+                        </div>
+                    </div>
+                    <div class="fg-review-stars">★★★★★</div>
+                    <p class="fg-review-text">"Incredible. I've bought luxury items for years, and the craftsmanship here is identical to the boutiques. My watch arrived safely packed and perfectly timed."</p>
+                    <div class="fg-review-product"><span>Purchased:</span> Premium Designer Watch</div>
+                </div>
+            </div>
+            
+            <div class="fg-review-nav">
+                <button class="fg-review-arrow" id="rev-scroll-left" aria-label="Previous Review">←</button>
+                <button class="fg-review-arrow" id="rev-scroll-right" aria-label="Next Review">→</button>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* --- Reviews Section CSS --- */
+        .fg-reviews-section { background-color: var(--fg-white); padding: 100px 0; border-bottom: 1px solid var(--fg-border); }
+        .fg-reviews-header { text-align: center; margin-bottom: 50px; padding: 0 5%; }
+        
+        .fg-aggregate-rating { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 20px; }
+        .fg-stars { display: flex; gap: 4px; color: var(--fg-black); }
+        .fg-stars svg { width: 20px; height: 20px; }
+        .fg-aggregate-rating span { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; color: var(--fg-grey); letter-spacing: 0.5px; text-transform: uppercase; }
+
+        .fg-reviews-container { position: relative; max-width: 1400px; margin: 0 auto; }
+        .fg-reviews-carousel { display: flex; gap: 25px; padding: 20px 5%; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+        .fg-reviews-carousel::-webkit-scrollbar { display: none; }
+
+        .fg-review-card { flex: 0 0 400px; scroll-snap-align: center; background-color: var(--fg-white); border: 1px solid var(--fg-border); padding: 35px 30px; display: flex; flex-direction: column; transition: box-shadow 0.3s ease; }
+        .fg-review-card:hover { box-shadow: 0 15px 35px rgba(0,0,0,0.04); }
+
+        .fg-review-top { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .fg-reviewer-avatar { width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 1.2rem; color: var(--fg-black); background-color: #F5F5F5; flex-shrink: 0; }
+        .fg-reviewer-info { display: flex; flex-direction: column; }
+        .fg-reviewer-name { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 700; color: var(--fg-black); display: flex; align-items: center; gap: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .fg-verified-icon { width: 14px; height: 14px; color: var(--fg-green); }
+        .fg-reviewer-loc { font-family: var(--font-sans); font-size: 0.75rem; color: var(--fg-grey); }
+
+        .fg-review-stars { color: var(--fg-gold); font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 2px; }
+        .fg-review-text { font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.6; color: var(--fg-black); margin: 0 0 25px 0; font-style: italic; flex-grow: 1; }
+        .fg-review-product { font-family: var(--font-sans); font-size: 0.8rem; color: var(--fg-black); font-weight: 600; padding-top: 15px; border-top: 1px solid var(--fg-border); }
+        .fg-review-product span { color: var(--fg-grey); font-weight: 400; margin-right: 5px; }
+
+        .fg-review-nav { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
+        .fg-review-arrow { background: transparent; border: 1px solid var(--fg-border); width: 45px; height: 45px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; color: var(--fg-black); transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .fg-review-arrow:hover { border-color: var(--fg-black); background-color: var(--fg-black); color: var(--fg-white); }
+
+        @media (max-width: 768px) {
+            .fg-reviews-carousel { gap: 15px; padding: 10px 5%; }
+            .fg-review-card { flex: 0 0 85vw; padding: 25px 20px; }
+            .fg-review-text { font-size: 1rem; }
+            .fg-review-nav { display: none; }
+        }
+    </style>
+
+    <section class="fg-ig-section">
+        <div class="fg-ig-container">
+            <div class="fg-ig-header">
+                <h2 class="fg-section-title">On The Grid</h2>
+                <p class="fg-section-subtitle">
+                    Join the ultimate fashion community. Follow 
+                    <a href="https://instagram.com/omegahubonline" target="_blank" class="fg-ig-handle">@OMEGAHUBONLINE</a>
+                </p>
+            </div>
+
+            <div class="fg-ig-grid">
+                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
+                    <img src="images/mix-Inventory/Mixinventory-3.jpg" alt="Omega Hub Lifestyle" loading="lazy">
+                    <div class="fg-ig-overlay">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span>Shop via DM</span>
+                    </div>
+                </a>
+                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
+                    <img src="images/SHIRTS & Dresses_/Balenciaga/Shirt&Dress-Balenciaga-1.jpg" alt="Balenciaga Apparel" loading="lazy">
+                    <div class="fg-ig-overlay">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span>Shop via DM</span>
+                    </div>
+                </a>
+                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
+                    <img src="images/mix-Inventory/Mixinventory-4.jpg" alt="Designer Accessories Stack" loading="lazy">
+                    <div class="fg-ig-overlay">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span>Shop via DM</span>
+                    </div>
+                </a>
+                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
+                    <img src="images/BAGS/Dior/Bag-Chloe-1.jpg" alt="Premium Designer Bag" loading="lazy">
+                    <div class="fg-ig-overlay">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span>Shop via DM</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="fg-ig-footer">
+                <a href="https://instagram.com/omegahubonline" target="_blank" class="fg-ig-btn">Follow Us</a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* --- Instagram Section CSS --- */
+        .fg-ig-section { background-color: var(--fg-off-white); padding: 100px 5%; }
+        .fg-ig-container { max-width: 1400px; margin: 0 auto; }
+        .fg-ig-header { text-align: center; margin-bottom: 50px; }
+        
+        .fg-ig-handle { color: var(--fg-black); font-weight: 700; text-decoration: none; transition: color 0.3s ease; }
+        .fg-ig-handle:hover { color: var(--fg-accent); }
+
+        .fg-ig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 50px; }
+        
+        .fg-ig-item { position: relative; width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background-color: #EAEAEA; display: block; border-radius: 4px; }
+        .fg-ig-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        
+        .fg-ig-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--fg-white); opacity: 0; transition: opacity 0.4s ease; }
+        .fg-ig-overlay svg { width: 32px; height: 32px; transform: translateY(15px); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .fg-ig-overlay span { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; transform: translateY(15px); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+
+        .fg-ig-item:hover img { transform: scale(1.08); }
+        .fg-ig-item:hover .fg-ig-overlay { opacity: 1; }
+        .fg-ig-item:hover .fg-ig-overlay svg, .fg-ig-item:hover .fg-ig-overlay span { transform: translateY(0); }
+
+        .fg-ig-footer { text-align: center; }
+        .fg-ig-btn { display: inline-block; background-color: transparent; color: var(--fg-black); border: 2px solid var(--fg-black); padding: 14px 40px; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: all 0.3s ease; }
+        .fg-ig-btn:hover { background-color: var(--fg-black); color: var(--fg-white); }
+
+        @media (max-width: 1024px) {
+            .fg-ig-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .fg-ig-section { padding: 80px 5%; }
+            .fg-ig-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .fg-ig-overlay svg { width: 24px; height: 24px; }
+            .fg-ig-overlay span { font-size: 0.75rem; letter-spacing: 1px; }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Product Carousel Logic
+            const carousel = document.getElementById('product-carousel');
+            const leftBtn = document.getElementById('scroll-left');
+            const rightBtn = document.getElementById('scroll-right');
+            if (carousel && leftBtn && rightBtn) {
+                const scrollAmount = 350; 
+                leftBtn.addEventListener('click', () => carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+                rightBtn.addEventListener('click', () => carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+            }
+
+            // Reviews Carousel Logic
+            const revCarousel = document.getElementById('review-carousel');
+            const revLeftBtn = document.getElementById('rev-scroll-left');
+            const revRightBtn = document.getElementById('rev-scroll-right');
+            if (revCarousel && revLeftBtn && revRightBtn) {
+                const revScrollAmount = 425; 
+                revLeftBtn.addEventListener('click', () => revCarousel.scrollBy({ left: -revScrollAmount, behavior: 'smooth' }));
+                revRightBtn.addEventListener('click', () => revCarousel.scrollBy({ left: revScrollAmount, behavior: 'smooth' }));
+            }
+        });
+    </script>
+
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
+
+</body>
+</html>

@@ -55,7 +55,7 @@ const headerHTML = `
 
         <div class="hub-mobile-menu" aria-hidden="true">
             <nav class="hub-mobile-nav">
-                <a href="new.html" class="hub-mobile-link hub-highlight">New In</a>
+                <a href="new-in.html" class="hub-mobile-link hub-highlight">New In</a>
                 <a href="bags.html" class="hub-mobile-link">Bags</a>
                 <a href="shoes.html" class="hub-mobile-link">Shoes</a>
                 <a href="watches.html" class="hub-mobile-link">Watches</a>
