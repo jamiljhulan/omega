@@ -55,11 +55,12 @@ const headerHTML = `
 
         <div class="hub-mobile-menu" aria-hidden="true">
             <nav class="hub-mobile-nav">
-                <a href="/new" class="hub-mobile-link hub-highlight">New In</a>
-                <a href="/bags" class="hub-mobile-link">Bags</a>
-                <a href="/shoes" class="hub-mobile-link">Shoes</a>
-                <a href="/watches" class="hub-mobile-link">Watches</a>
-                <a href="/sale" class="hub-mobile-link hub-sale">Sale</a>
+                <a href="new.html" class="hub-mobile-link hub-highlight">New In</a>
+                <a href="bags.html" class="hub-mobile-link">Bags</a>
+                <a href="shoes.html" class="hub-mobile-link">Shoes</a>
+                <a href="watches.html" class="hub-mobile-link">Watches</a>
+                <a href="discover.html" class="hub-mobile-link">Discover</a>
+                <a href="sale.html" class="hub-mobile-link hub-sale">Sale</a>
             </nav>
             <div class="hub-mobile-footer">
                 <a href="https://ig.me/m/omegahubonline" class="hub-mobile-ig-btn">DM @OMEGAHUBONLINE</a>
