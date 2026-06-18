@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping & Delivery | Omega Hub Online</title>
+     <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Core Variables --- */
+        :root {
+            --fg-black: #0A0A0A;
+            --fg-white: #FFFFFF;
+            --fg-off-white: #FAFAFA;
+            --fg-grey-light: #EAEAEA;
+            --fg-grey: #666666;
+            --fg-accent: #FF0055;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: var(--font-sans); 
+            background-color: var(--fg-off-white); 
+            color: var(--fg-black); 
+            line-height: 1.6;
+            overflow-x: hidden; 
+        }
+
+        /* --- Page Hero --- */
+        .policy-hero {
+            background-color: var(--fg-black);
+            color: var(--fg-white);
+            padding: 120px 5% 80px;
+            text-align: center;
+        }
+        .policy-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+        .policy-hero p {
+            color: #E0E0E0;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Main Content Layout --- */
+        .policy-container {
+            max-width: 1000px;
+            margin: -40px auto 100px;
+            background: var(--fg-white);
+            padding: 60px 8%;
+            border: 1px solid var(--fg-grey-light);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            position: relative;
+            z-index: 2;
+        }
+
+        .policy-section {
+            margin-bottom: 50px;
+        }
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+            color: var(--fg-black);
+            border-bottom: 2px solid var(--fg-black);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .policy-section p {
+            color: var(--fg-grey);
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- The Omega Hub Process (Timeline) --- */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .process-step {
+            background: var(--fg-off-white);
+            padding: 30px;
+            border: 1px solid var(--fg-grey-light);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--fg-black);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--fg-black);
+            color: var(--fg-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+
+        .step-title {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--fg-grey);
+        }
+
+        /* --- Info Blocks --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .info-block h3 {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 10px 0;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 900px) {
+            .process-grid { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: 1fr; }
+            .policy-hero h1 { font-size: 2.8rem; }
+            .policy-container { padding: 40px 5%; margin-top: 0; border-top: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="policy-hero">
+        <h1>Shipping & Delivery</h1>
+        <p>Experience our white-glove, global delivery service. From our international vaults directly to your door.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="policy-container">
+        
+        <section class="policy-section">
+            <h2>The Omega Hub Guarantee</h2>
+            <p>At Omega Hub Online, we pride ourselves on delivering premium AAA luxury goods with absolute transparency. Our primary client base is located in the USA (95%), along with Canada, Australia, and select worldwide regions. To serve this global clientele efficiently, our physical inventory is securely held in our state-of-the-art warehouses in <strong>Dubai</strong> and <strong>Hong Kong</strong>.</p>
+        </section>
+
+        <section class="policy-section">
+            <h2>Our 3-Step Fulfillment Process</h2>
+            <p>We do not just ship products; we ensure perfection before your item ever leaves our facility. Here is exactly what happens when you secure a piece with us:</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Order Preparation</div>
+                    <div class="step-desc">Once your payment (or 50% deposit) is secured via PayPal, Zelle, ApplePay, or Credit Card, our team retrieves your item from our Dubai or Hong Kong vault and handles any requested customizations.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Video Approval</div>
+                    <div class="step-desc">Before shipping, we record a high-definition quality-check video of your exact item. We send this to you via DM/WhatsApp. <strong>Your order does not ship until you give final approval.</strong></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">FedEx Dispatch</div>
+                    <div class="step-desc">Upon your approval, your package is securely boxed with full premium packaging and dispatched globally via FedEx Expedited Shipping.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <div class="info-grid">
+                <div class="info-block">
+                    <h3>Delivery Timelines</h3>
+                    <p>Once you have approved your pre-shipment quality video, your package is handed over to FedEx. You can expect your delivery to arrive within <strong>7 Working Days</strong>, whether you are in the USA, Canada, Australia, or beyond.</p>
+                </div>
+                <div class="info-block">
+                    <h3>Secure Tracking</h3>
+                    <p>Complete peace of mind is our priority. As soon as your order leaves our warehouse, you will be provided with a live FedEx tracking number so you can monitor your premium goods every step of the way.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <h2>Customs, Duties & Taxes</h2>
+            <p>Because our items ship directly from our international hubs in Dubai and Hong Kong, international shipments may occasionally be subject to local customs duties or import taxes. While we optimize our shipping processes to minimize any friction at borders, any localized import fees mandated by your country's customs agency are the responsibility of the buyer.</p>
+        </section>
+
+        <section class="policy-section">
+            <h2>Returns & Refunds</h2>
+            <p>We stand behind the quality of every single item we source. Because of our strict Pre-Shipment Video Approval process, our clients always know exactly what they are getting. However, if you are unsatisfied with your purchase upon arrival, we offer a <strong>fully guaranteed return and refund policy</strong> to ensure 100% customer satisfaction. For detailed instructions on initiating a return, please DM us directly on Instagram.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <!-- External Scripts -->
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>

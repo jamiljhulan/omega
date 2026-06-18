@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns & Exchanges | Omega Hub Online</title>
+     <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Core Variables --- */
+        :root {
+            --fg-black: #0A0A0A;
+            --fg-white: #FFFFFF;
+            --fg-off-white: #FAFAFA;
+            --fg-grey-light: #EAEAEA;
+            --fg-grey: #666666;
+            --fg-accent: #FF0055;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: var(--font-sans); 
+            background-color: var(--fg-off-white); 
+            color: var(--fg-black); 
+            line-height: 1.6;
+            overflow-x: hidden; 
+        }
+
+        /* --- Page Hero --- */
+        .policy-hero {
+            background-color: var(--fg-black);
+            color: var(--fg-white);
+            padding: 120px 5% 80px;
+            text-align: center;
+        }
+        .policy-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+        .policy-hero p {
+            color: #E0E0E0;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Main Content Layout --- */
+        .policy-container {
+            max-width: 1000px;
+            margin: -40px auto 100px;
+            background: var(--fg-white);
+            padding: 60px 8%;
+            border: 1px solid var(--fg-grey-light);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            position: relative;
+            z-index: 2;
+        }
+
+        .policy-section {
+            margin-bottom: 50px;
+        }
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+            color: var(--fg-black);
+            border-bottom: 2px solid var(--fg-black);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .policy-section p {
+            color: var(--fg-grey);
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- The Omega Hub Process (Timeline) --- */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .process-step {
+            background: var(--fg-off-white);
+            padding: 30px;
+            border: 1px solid var(--fg-grey-light);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--fg-black);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--fg-black);
+            color: var(--fg-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+
+        .step-title {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--fg-grey);
+        }
+
+        /* --- Info Blocks --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .info-block h3 {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 10px 0;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 900px) {
+            .process-grid { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: 1fr; }
+            .policy-hero h1 { font-size: 2.8rem; }
+            .policy-container { padding: 40px 5%; margin-top: 0; border-top: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <section class="policy-hero">
+        <h1>Returns & Exchanges</h1>
+        <p>Your satisfaction is our ultimate priority. Enjoy a fully guaranteed return and refund policy on all our premium items.</p>
+    </section>
+
+    <main class="policy-container">
+        
+        <section class="policy-section">
+            <h2>The 100% Satisfaction Guarantee</h2>
+            <p>What sets Omega Hub Online apart from any other boutique is our unwavering commitment to your happiness. We want you to feel pure luxury the moment you unbox your package. If for any reason you are not completely satisfied with your premium AAA piece, we offer a hassle-free, fully guaranteed return and refund policy.</p>
+        </section>
+
+        <section class="policy-section">
+            <h2>How to Initiate a Return</h2>
+            <p>We have designed our return process to be as seamless and personalized as our purchasing process. Follow these simple steps if you wish to return or exchange an item:</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Reach Out</div>
+                    <div class="step-desc">Simply send us a DM on Instagram or message us via WhatsApp with your order details. Our team is standing by to personally assist you.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Ship It Back</div>
+                    <div class="step-desc">We will provide you with the return address. Repackage the item in its original, premium packaging to ensure it arrives safely.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Fast Refund</div>
+                    <div class="step-desc">Once we receive and inspect the item, we will immediately process your full refund via your original secure payment method.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <div class="info-grid">
+                <div class="info-block">
+                    <h3>Pre-Shipment Video Approval</h3>
+                    <p>To ensure you absolutely love your piece, we proactively prevent issues before they happen. Before any order leaves our warehouses in Dubai or Hong Kong, we send you a detailed, high-definition video of your specific item. We only ship once you give us your final approval.</p>
+                </div>
+                <div class="info-block">
+                    <h3>The 50/50 Payment Offer</h3>
+                    <p>We build trust through flexibility. When negotiating an offer in our DMs, we frequently provide a <strong>50/50 payment structure</strong>. You pay a 50% deposit upfront to secure the item, and the remaining 50% only after you have reviewed the pre-shipment video and absolutely love the product.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <h2>Secure Processing</h2>
+            <p>All financial transactions—whether it is your initial purchase, a 50/50 split, or a return—are handled with the utmost security. We process all refunds directly back to your original payment method, including <strong>PayPal, Zelle, ApplePay, or Credit Card</strong>. With our guaranteed refund policy, you can shop our international vault with absolute confidence.</p>
+        </section>
+
+        <section class="policy-section">
+            <h2>Return Conditions</h2>
+            <p>To qualify for a full refund or exchange, items must be returned in the exact premium condition they were received. This includes all original tags, protective covers, dust bags, and boxes. Items that show signs of wear, damage, or alteration will not be eligible for return.</p>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>

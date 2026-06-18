@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Shoes | Omega Hub Online</title>
+     <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Core Variables --- */
+        :root {
+            --fg-black: #0A0A0A;
+            --fg-white: #FFFFFF;
+            --fg-off-white: #FAFAFA;
+            --fg-grey-light: #EAEAEA;
+            --fg-grey: #666666;
+            --fg-accent: #FF0055;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body { margin: 0; font-family: var(--font-sans); background-color: var(--fg-off-white); color: var(--fg-black); overflow-x: hidden; }
+
+        /* --- Hero Banner --- */
+        .category-hero { 
+            position: relative; width: 100%; height: 50vh; min-height: 400px; 
+            background-color: var(--fg-black); display: flex; align-items: center; 
+            justify-content: center; text-align: center; overflow: hidden; padding-top: 80px; 
+        }
+        .category-hero img { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; opacity: 0.5; z-index: 1; 
+        }
+        .hero-content { position: relative; z-index: 2; color: var(--fg-white); padding: 0 5%; }
+        .hero-tag { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; display: block; }
+        .hero-title { font-family: var(--font-serif); font-size: 4rem; font-weight: 400; margin: 0 0 20px 0; letter-spacing: -1px; }
+        .hero-subtitle { font-family: var(--font-sans); font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: #E0E0E0; }
+
+        /* --- Grid & Cards --- */
+        .shop-section { padding: 60px 5% 100px; max-width: 1400px; margin: 0 auto; }
+        .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; width: 100%; }
+
+        .shop-card { background: var(--fg-white); display: flex; flex-direction: column; transition: transform 0.3s ease; position: relative; border: 1px solid var(--fg-grey-light); }
+        .shop-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.06); }
+        
+        .shop-card-image { position: relative; width: 100%; padding-top: 125%; background-color: #F8F8F8; overflow: hidden; }
+        .shop-card-image img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+        .shop-card:hover .shop-card-image img { transform: scale(1.05); }
+
+        .shop-card-content { padding: 20px 15px; display: flex; flex-direction: column; flex-grow: 1; text-align: center; }
+        .shop-card-brand { font-size: 0.75rem; color: var(--fg-grey); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; font-weight: 600; }
+        .shop-card-title { font-family: var(--font-serif); font-size: 1.1rem; margin: 0 0 10px 0; color: var(--fg-black); }
+        .shop-card-price { font-size: 1.15rem; font-weight: 700; color: var(--fg-black); margin-bottom: 15px; }
+
+        .btn-dm { display: inline-block; padding: 12px 0; width: 100%; text-align: center; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--fg-black); background-color: transparent; color: var(--fg-black); transition: all 0.3s ease; cursor: pointer; }
+        .btn-dm:hover { background-color: var(--fg-black); color: var(--fg-white); }
+
+        /* --- Responsive --- */
+        @media (max-width: 1024px) { .product-grid { grid-template-columns: repeat(3, 1fr); } .hero-title { font-size: 3.5rem; } }
+        @media (max-width: 768px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } .hero-title { font-size: 2.8rem; } .category-hero { min-height: 350px; } .shop-card-title { font-size: 0.95rem; } .btn-dm { padding: 10px 0; font-size: 0.7rem;} }
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <!-- Category Hero Section -->
+    <section class="category-hero">
+        <img src="images/SHOES/Christian-Louboutin/Shoes-ChristianLouboutin1.jpg" alt="Designer Shoes">
+        <div class="hero-content">
+            <span class="hero-tag">The Collection</span>
+            <h1 class="hero-title">Designer Shoes</h1>
+            <p class="hero-subtitle">Step into luxury with our curated selection of premium heels, sneakers, loafers, and flats from the world's finest houses.</p>
+        </div>
+    </section>
+
+    <!-- Dynamic Product Grid -->
+    <section class="shop-section">
+        <div class="product-grid" id="shoes-grid">
+            <!-- JavaScript will inject 20 shoes here -->
+        </div>
+    </section>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <!-- External Scripts -->
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+    <!-- ⚡ SHOES GENERATOR SCRIPT ⚡ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // A carefully mixed array of 20 shoes from your various folders
+            const shoesArray = [
+                "images/SHOES/Aquazzura/Shoes-Aquazzura-1.jpg",
+                "images/SHOES/Aquazzura/Shoes-Aquazzura-5.jpg",
+                "images/SHOES/Celine/Shoes-Celine2.jpg",
+                "images/SHOES/Chanel/Shoes-Chanel1.jpg",
+                "images/SHOES/Chanel/Shoes-Chanel15.jpg",
+                "images/SHOES/Christian-Louboutin/Shoes-ChristianLouboutin1.jpg",
+                "images/SHOES/Christian-Louboutin/Shoes-ChristianLouboutin4.jpg",
+                "images/SHOES/Dior/Shoes-Dior3.jpg",
+                "images/SHOES/Gucci/Shoes-Gucci1.jpg",
+                "images/SHOES/Gucci/Shoes-Gucci12.jpg",
+                "images/SHOES/Hermes/Shoes-Hermes2.jpg",
+                "images/SHOES/Jimmy-Choo/Shoes-JimmyChoo1.jpg",
+                "images/SHOES/Loro-Piana/Shoes-Loropiana-1.jpg",
+                "images/SHOES/Louis-Vuitton/Shoes-LV-1.jpg",
+                "images/SHOES/MiuMiu/Shoes-miumiu-1.jpg",
+                "images/SHOES/MiuMiu/Shoes-miumiu-3.jpg",
+                "images/SHOES/Prada/Shoes-Prada1.jpg",
+                "images/SHOES/Valentino/Shoes-Valentino-1.jpg",
+                "images/SHOES/Valentino/Shoes-Valentino-5.jpg",
+                "images/SHOES/YSL/Shoes-YSL-1.jpg"
+            ];
+
+            const gridContainer = document.getElementById('shoes-grid');
+            let generatedHTML = "";
+
+            // Loop through the 20 shoes
+            shoesArray.forEach((imageSrc, index) => {
+                
+                // Extract brand name from folder path to make it look realistic
+                let brandName = "Omega Hub Exclusive";
+                if(imageSrc.includes("Aquazzura")) brandName = "Aquazzura";
+                if(imageSrc.includes("Celine")) brandName = "Celine";
+                if(imageSrc.includes("Chanel")) brandName = "Chanel";
+                if(imageSrc.includes("Christian-Louboutin")) brandName = "Christian Louboutin";
+                if(imageSrc.includes("Dior")) brandName = "Dior";
+                if(imageSrc.includes("Gucci")) brandName = "Gucci";
+                if(imageSrc.includes("Hermes")) brandName = "Hermès";
+                if(imageSrc.includes("Jimmy-Choo")) brandName = "Jimmy Choo";
+                if(imageSrc.includes("Loro-Piana")) brandName = "Loro Piana";
+                if(imageSrc.includes("Louis-Vuitton")) brandName = "Louis Vuitton";
+                if(imageSrc.includes("MiuMiu")) brandName = "Miu Miu";
+                if(imageSrc.includes("Prada")) brandName = "Prada";
+                if(imageSrc.includes("Valentino")) brandName = "Valentino";
+                if(imageSrc.includes("YSL")) brandName = "Saint Laurent";
+
+                // Generate random price between $600 and $1000 (your requested shoes range)
+                const randomPrice = Math.floor(Math.random() * (1000 - 600 + 1)) + 600;
+
+                generatedHTML += `
+                    <div class="shop-card">
+                        <div class="shop-card-image">
+                            <img src="${imageSrc}" alt="${brandName} Premium Shoes" loading="lazy">
+                        </div>
+                        <div class="shop-card-content">
+                            <span class="shop-card-brand">${brandName}</span>
+                            <h3 class="shop-card-title">Premium Designer Footwear</h3>
+                            <div class="shop-card-price">$${randomPrice}</div>
+                            <a href="https://wa.me/03323188846?text=I'm%20interested%20in%20the%20${brandName}%20shoes%20(${imageSrc})" target="_blank" class="btn-dm">DM TO BUY</a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Inject the cards into the grid
+            gridContainer.innerHTML = generatedHTML;
+        });
+    </script>
+</body>
+</html>

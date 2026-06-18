@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Bags | Omega Hub Online</title>
+     <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Core Variables --- */
+        :root {
+            --fg-black: #0A0A0A;
+            --fg-white: #FFFFFF;
+            --fg-off-white: #FAFAFA;
+            --fg-grey-light: #EAEAEA;
+            --fg-grey: #666666;
+            --fg-accent: #FF0055;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body { margin: 0; font-family: var(--font-sans); background-color: var(--fg-off-white); color: var(--fg-black); overflow-x: hidden; }
+
+        /* --- Hero Banner --- */
+        .category-hero { 
+            position: relative; width: 100%; height: 50vh; min-height: 400px; 
+            background-color: var(--fg-black); display: flex; align-items: center; 
+            justify-content: center; text-align: center; overflow: hidden; padding-top: 80px; 
+        }
+        .category-hero img { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; opacity: 0.5; z-index: 1; 
+        }
+        .hero-content { position: relative; z-index: 2; color: var(--fg-white); padding: 0 5%; }
+        .hero-tag { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; display: block; }
+        .hero-title { font-family: var(--font-serif); font-size: 4rem; font-weight: 400; margin: 0 0 20px 0; letter-spacing: -1px; }
+        .hero-subtitle { font-family: var(--font-sans); font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: #E0E0E0; }
+
+        /* --- Grid & Cards --- */
+        .shop-section { padding: 60px 5% 100px; max-width: 1400px; margin: 0 auto; }
+        .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; width: 100%; }
+
+        .shop-card { background: var(--fg-white); display: flex; flex-direction: column; transition: transform 0.3s ease; position: relative; border: 1px solid var(--fg-grey-light); }
+        .shop-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.06); }
+        
+        .shop-card-image { position: relative; width: 100%; padding-top: 125%; background-color: #F8F8F8; overflow: hidden; }
+        .shop-card-image img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+        .shop-card:hover .shop-card-image img { transform: scale(1.05); }
+
+        .shop-card-content { padding: 20px 15px; display: flex; flex-direction: column; flex-grow: 1; text-align: center; }
+        .shop-card-brand { font-size: 0.75rem; color: var(--fg-grey); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; font-weight: 600; }
+        .shop-card-title { font-family: var(--font-serif); font-size: 1.1rem; margin: 0 0 10px 0; color: var(--fg-black); }
+        .shop-card-price { font-size: 1.15rem; font-weight: 700; color: var(--fg-black); margin-bottom: 15px; }
+
+        .btn-dm { display: inline-block; padding: 12px 0; width: 100%; text-align: center; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--fg-black); background-color: transparent; color: var(--fg-black); transition: all 0.3s ease; cursor: pointer; }
+        .btn-dm:hover { background-color: var(--fg-black); color: var(--fg-white); }
+
+        /* --- Responsive --- */
+        @media (max-width: 1024px) { .product-grid { grid-template-columns: repeat(3, 1fr); } .hero-title { font-size: 3.5rem; } }
+        @media (max-width: 768px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } .hero-title { font-size: 2.8rem; } .category-hero { min-height: 350px; } .shop-card-title { font-size: 0.95rem; } .btn-dm { padding: 10px 0; font-size: 0.7rem;} }
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <!-- Category Hero Section -->
+    <section class="category-hero">
+        <img src="images/BAGS/Chanel/Celine-1.jpg" alt="Designer Bags">
+        <div class="hero-content">
+            <span class="hero-tag">The Collection</span>
+            <h1 class="hero-title">Designer Bags</h1>
+            <p class="hero-subtitle">Elevate your aesthetic with our curated selection of premium handbags, totes, and clutches from the world's finest houses.</p>
+        </div>
+    </section>
+
+    <!-- Dynamic Product Grid -->
+    <section class="shop-section">
+        <div class="product-grid" id="bags-grid">
+            <!-- JavaScript will inject 20 bags here -->
+        </div>
+    </section>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <!-- External Scripts -->
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+    <!-- ⚡ BAGS GENERATOR SCRIPT ⚡ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // A carefully mixed array of 20 bags from your various folders
+            const bagsArray = [
+                "images/BAGS/Balenciaga/Bag-Balenciaga-001.jpg",
+                "images/BAGS/Balenciaga/Bag-Balenciaga-005.jpg",
+                "images/BAGS/Bottega-Veneta/Bag-Bottega-Veneta-12.jpg",
+                "images/BAGS/Bottega-Veneta/Bag-Bottega-Veneta-33.jpg",
+                "images/BAGS/Bottega-Veneta/Bag-Bottega-Veneta-50.jpg",
+                "images/BAGS/Celine/Celine-14.jpg",
+                "images/BAGS/Celine/Celine-3.jpg",
+                "images/BAGS/Celine/Celine-8.jpg",
+                "images/BAGS/Chanel/Celine-1.jpg",
+                "images/BAGS/Chanel/Celine-12.jpg",
+                "images/BAGS/Chanel/Celine-20.jpg",
+                "images/BAGS/Chanel/Celine-5.jpg",
+                "images/BAGS/Chloe/Bag-Chloe.jpg",
+                "images/BAGS/Dior/Bag-Chloe-1.jpg",
+                "images/BAGS/Dior/Bag-Chloe-10.jpg",
+                "images/BAGS/Fendi/Bag-Fendi-2.jpg",
+                "images/BAGS/Gucci/Bag-Gucci-15.jpg",
+                "images/BAGS/Hermes/Bag-Hermes3.jpg",
+                "images/BAGS/Louis-Vuitton/Bag-LV12.jpg",
+                "images/BAGS/Prada/Bag-Prada5.jpg"
+            ];
+
+            const gridContainer = document.getElementById('bags-grid');
+            let generatedHTML = "";
+
+            // Loop through the 20 bags
+            bagsArray.forEach((imageSrc, index) => {
+                
+                // Extract brand name from folder path to make it look realistic
+                let brandName = "Omega Hub Exclusive";
+                if(imageSrc.includes("Balenciaga")) brandName = "Balenciaga";
+                if(imageSrc.includes("Bottega-Veneta")) brandName = "Bottega Veneta";
+                if(imageSrc.includes("Celine")) brandName = "Celine";
+                if(imageSrc.includes("Chanel")) brandName = "Chanel";
+                if(imageSrc.includes("Chloe")) brandName = "Chloé";
+                if(imageSrc.includes("Dior")) brandName = "Dior";
+                if(imageSrc.includes("Fendi")) brandName = "Fendi";
+                if(imageSrc.includes("Gucci")) brandName = "Gucci";
+                if(imageSrc.includes("Hermes")) brandName = "Hermès";
+                if(imageSrc.includes("Louis-Vuitton")) brandName = "Louis Vuitton";
+                if(imageSrc.includes("Prada")) brandName = "Prada";
+
+                // Generate random price between $800 and $1200 (your requested bag range)
+                const randomPrice = Math.floor(Math.random() * (1200 - 800 + 1)) + 800;
+
+                generatedHTML += `
+                    <div class="shop-card">
+                        <div class="shop-card-image">
+                            <img src="${imageSrc}" alt="${brandName} Premium Bag" loading="lazy">
+                        </div>
+                        <div class="shop-card-content">
+                            <span class="shop-card-brand">${brandName}</span>
+                            <h3 class="shop-card-title">Premium Designer Piece</h3>
+                            <div class="shop-card-price">$${randomPrice}</div>
+                            <a href="https://wa.me/03323188846?text=I'm%20interested%20in%20the%20${brandName}%20bag%20(${imageSrc})" target="_blank" class="btn-dm">DM TO BUY</a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Inject the cards into the grid
+            gridContainer.innerHTML = generatedHTML;
+        });
+    </script>
+</html>
+</body>

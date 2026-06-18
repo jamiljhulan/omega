@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order | Omega Hub Online</title>
+     <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Core Variables --- */
+        :root {
+            --fg-black: #0A0A0A;
+            --fg-white: #FFFFFF;
+            --fg-off-white: #FAFAFA;
+            --fg-grey-light: #EAEAEA;
+            --fg-grey: #666666;
+            --fg-accent: #FF0055;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: var(--font-sans); 
+            background-color: var(--fg-off-white); 
+            color: var(--fg-black); 
+            line-height: 1.6;
+            overflow-x: hidden; 
+        }
+
+        /* --- Page Hero --- */
+        .policy-hero {
+            background-color: var(--fg-black);
+            color: var(--fg-white);
+            padding: 120px 5% 80px;
+            text-align: center;
+        }
+        .policy-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+        .policy-hero p {
+            color: #E0E0E0;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Main Content Layout --- */
+        .policy-container {
+            max-width: 800px; /* Slightly narrower for a focused tracking page */
+            margin: -40px auto 100px;
+            background: var(--fg-white);
+            padding: 60px 8%;
+            border: 1px solid var(--fg-grey-light);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            position: relative;
+            z-index: 2;
+            text-align: center; /* Center aligning content for this specific page */
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+        }
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+            color: var(--fg-black);
+            border-bottom: 2px solid var(--fg-black);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .policy-section p {
+            color: var(--fg-grey);
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- Tracking Specific Styles --- */
+        .tracking-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .tracking-instructions {
+            background: var(--fg-off-white);
+            border: 1px solid var(--fg-grey-light);
+            padding: 30px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .tracking-instructions h3 {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+
+        /* --- Premium Button --- */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--fg-black);
+            color: var(--fg-white);
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 18px 45px;
+            text-decoration: none;
+            border: 1px solid var(--fg-black);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--fg-white);
+            color: var(--fg-black);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 900px) {
+            .policy-hero h1 { font-size: 2.8rem; }
+            .policy-container { padding: 40px 5%; margin-top: 0; border-top: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="policy-hero">
+        <h1>Track Your Order</h1>
+        <p>Monitor your premium piece's journey from our international vaults directly to your door.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="policy-container">
+        
+        <section class="policy-section">
+            <span class="tracking-icon">✈️</span>
+            <h2>Global Expedited Shipping</h2>
+            <p>You have approved your pre-shipment quality video, and your item is officially in transit. All Omega Hub Online orders are dispatched securely via FedEx from our warehouses in Dubai and Hong Kong, arriving globally within an estimated <strong>7 Working Days</strong>.</p>
+        </section>
+
+        <section class="policy-section">
+            <div class="tracking-instructions">
+                <h3>How to Track Your Package</h3>
+                <p>1. Locate the unique FedEx tracking number provided to you by our team in your Instagram or WhatsApp DMs.</p>
+                <p>2. Click the secure tracking button below to visit the official FedEx portal.</p>
+                <p>3. Enter your tracking number to see real-time, step-by-step updates on your delivery.</p>
+            </div>
+            
+            <!-- The Requested FedEx Button -->
+            <a href="https://www.fedex.com/fedextrack/" target="_blank" class="btn-primary">Track via FedEx</a>
+        </section>
+
+        <section class="policy-section" style="margin-top: 50px; border-top: 1px solid var(--fg-grey-light); padding-top: 40px;">
+            <h2>Need Assistance?</h2>
+            <p>If you have any questions regarding your shipment status, customs clearance, or if you need us to look up your tracking number again, our VIP support team is always available. Simply send us a DM on Instagram.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <!-- External Scripts -->
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>
