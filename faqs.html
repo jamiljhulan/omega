@@ -3,12 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs | Omega Hub Online</title>
-     <link rel="icon" href="images/favicon.png" type="image/png">
-    <!-- Google Fonts -->
+    <title>Luxury Service FAQs | Omega Hub Private Archive</title>
+    <meta name="description" content="Have questions about our VIP luxury concierge, shipping to California and Florida, or authenticating designer bags? Read the Omega Hub FAQs.">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
+    <!-- AEO & GEO Mastery: FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are the designer bags and luxury items at Omega Hub authentic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every piece in the Omega Hub Private Archive undergoes rigorous, multi-point authentication by luxury experts at our Dubai hub before being listed. We guarantee 100% authenticity for all brands, including Hermès, Chanel, and Louis Vuitton."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I purchase an item from the Omega Hub Vault?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We operate exclusively through a VIP Instagram Concierge model to ensure a personalized luxury experience. Simply click 'DM TO NEGOTIATE' or 'DM TO BUY' on any product, and our styling team will finalize your order securely via direct message."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I negotiate the price of a designer item?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We welcome private offers. Because we operate as a direct-to-buyer archive without traditional retail markups, we respect your budget and encourage reasonable negotiations on our vault pieces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does VIP shipping take to California and Florida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer complimentary expedited shipping to the US. Once your item passes final quality inspection and packaging at our fulfillment center, it typically arrives to clients in California or Florida within 4 to 7 business days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your return policy on luxury archive pieces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Due to the exclusive, highly sought-after nature of our sourced inventory, all private archive sales are final. However, we provide detailed high-resolution videos and condition reports via our Instagram DM concierge prior to purchase to ensure your complete satisfaction."
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         /* --- Core Variables --- */
@@ -28,242 +79,249 @@
             font-family: var(--font-sans); 
             background-color: var(--fg-off-white); 
             color: var(--fg-black); 
-            line-height: 1.6;
-            overflow-x: hidden; 
+            padding-top: 100px; 
+            overflow-x: hidden;
         }
 
-        /* --- Page Hero --- */
-        .policy-hero {
-            background-color: var(--fg-black);
-            color: var(--fg-white);
-            padding: 120px 5% 80px;
+        /* --- Page Header --- */
+        .faq-header {
             text-align: center;
+            padding: 80px 5% 40px;
+            background-color: var(--fg-white);
+            border-bottom: 1px solid var(--fg-grey-light);
         }
-        .policy-hero h1 {
+        .faq-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--fg-accent);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .faq-title {
             font-family: var(--font-serif);
             font-size: 3.5rem;
-            margin: 0 0 15px 0;
-            font-weight: 600;
+            margin: 0 0 20px 0;
             letter-spacing: -1px;
+            color: var(--fg-black);
         }
-        .policy-hero p {
-            color: #E0E0E0;
+        .faq-subtitle {
             font-size: 1.1rem;
+            color: var(--fg-grey);
             max-width: 600px;
             margin: 0 auto;
+            line-height: 1.6;
         }
 
-        /* --- Main Content Layout --- */
-        .policy-container {
-            max-width: 1000px;
-            margin: -40px auto 100px;
-            background: var(--fg-white);
-            padding: 60px 8%;
-            border: 1px solid var(--fg-grey-light);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
-            position: relative;
-            z-index: 2;
-        }
-
-        .policy-section {
-            margin-bottom: 50px;
-        }
-        .policy-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .policy-section h2 {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            margin: 0 0 20px 0;
-            color: var(--fg-black);
-            border-bottom: 2px solid var(--fg-black);
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-
-        /* --- FAQ Accordion Styles --- */
-        .faq-category {
-            margin-bottom: 40px;
-        }
-
-        .faq-category h3 {
-            font-family: var(--font-sans);
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--fg-black);
-            margin-bottom: 20px;
-            background-color: var(--fg-off-white);
-            padding: 10px 20px;
-            border-left: 3px solid var(--fg-black);
+        /* --- FAQ Accordion Layout --- */
+        .faq-container {
+            max-width: 900px;
+            margin: 80px auto 120px;
+            padding: 0 5%;
         }
 
         .faq-item {
             border-bottom: 1px solid var(--fg-grey-light);
-            padding: 20px 0;
+            padding: 25px 0;
         }
 
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-
-        .faq-item details {
-            width: 100%;
-        }
-
-        .faq-item summary {
-            font-family: var(--font-sans);
-            font-weight: 600;
-            font-size: 1.1rem;
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             cursor: pointer;
-            list-style: none; /* Removes default arrow */
-            position: relative;
-            padding-right: 30px;
-            outline: none;
-        }
-
-        /* Hide default marker for webkit */
-        .faq-item summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .faq-item summary::after {
-            content: '+';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            font-family: var(--font-serif);
             font-size: 1.5rem;
-            font-weight: 300;
+            font-weight: 600;
             color: var(--fg-black);
-            transition: transform 0.3s ease;
+            transition: color 0.3s ease;
+            margin: 0;
+        }
+        .faq-question:hover {
+            color: var(--fg-accent);
         }
 
-        .faq-item details[open] summary::after {
-            transform: translateY(-50%) rotate(45deg); /* Turns + into x */
-        }
-
-        .faq-item p {
-            margin-top: 15px;
+        .faq-icon {
+            font-size: 1.8rem;
+            font-weight: 300;
+            transition: transform 0.4s ease;
             color: var(--fg-grey);
-            font-size: 1.05rem;
-            line-height: 1.6;
-            padding-right: 20px;
         }
 
-        /* --- Responsive --- */
-        @media (max-width: 900px) {
-            .policy-hero h1 { font-size: 2.8rem; }
-            .policy-container { padding: 40px 5%; margin-top: 0; border-top: none; }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+            margin-top: 0;
+        }
+
+        .faq-answer p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--fg-grey);
+            margin: 0;
+            padding-right: 40px;
+        }
+
+        /* Active State Classes */
+        .faq-item.active .faq-answer {
+            max-height: 300px; /* Arbitrary large number for CSS transition */
+            opacity: 1;
+            margin-top: 15px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg); /* Turns the + into an x */
+            color: var(--fg-accent);
+        }
+
+        /* --- DM Call to Action --- */
+        .faq-cta {
+            background-color: var(--fg-black);
+            color: var(--fg-white);
+            padding: 60px 5%;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 60px;
+        }
+        .faq-cta h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin: 0 0 15px 0;
+        }
+        .faq-cta p {
+            color: #E0E0E0;
+            margin-bottom: 30px;
+        }
+        .btn-dm-light { 
+            display: inline-flex; 
+            align-items: center;
+            gap: 10px;
+            padding: 15px 35px; 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            background-color: var(--fg-white); 
+            color: var(--fg-black); 
+            transition: transform 0.2s ease, background 0.3s ease; 
+        }
+        .btn-dm-light:hover { 
+            background-color: var(--fg-accent); 
+            color: var(--fg-white);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .faq-title { font-size: 2.5rem; }
+            .faq-question { font-size: 1.2rem; }
+            .faq-answer p { padding-right: 0; font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Injection -->
     <div id="header-placeholder"></div>
 
-    <!-- Page Hero -->
-    <section class="policy-hero">
-        <h1>Frequently Asked Questions</h1>
-        <p>Everything you need to know about our premium items, the "DM to Buy" process, and our white-glove international shipping.</p>
+    <section class="faq-header">
+        <div class="faq-tag">Client Services</div>
+        <h1 class="faq-title">Concierge & Protocol</h1>
+        <p class="faq-subtitle">Everything you need to know about navigating the Omega Hub Private Archive, from offer negotiation to VIP delivery.</p>
     </section>
 
-    <!-- Main Content -->
-    <main class="policy-container">
-        
-        <section class="policy-section">
-            <h2>Client Inquiries</h2>
-            
-            <!-- Category: Ordering & Payment -->
-            <div class="faq-category">
-                <h3>Ordering & Payments</h3>
-                
-                <div class="faq-item">
-                    <details>
-                        <summary>How do I purchase an item from Omega Hub Online?</summary>
-                        <p>We operate on an exclusive "DM to Buy" model. Simply browse our site or Instagram page, select the premium piece you desire, and click "DM TO BUY." One of our dedicated team members will personally assist you via Instagram or WhatsApp to finalize your order, discuss any customizations, and process payment.</p>
-                    </details>
-                </div>
+    <main class="faq-container">
 
-                <div class="faq-item">
-                    <details>
-                        <summary>What payment methods do you accept?</summary>
-                        <p>We prioritize your financial security. We accept all major secure payment platforms, including <strong>PayPal, Zelle, ApplePay, and Credit Cards</strong>. All transactions are fully protected.</p>
-                    </details>
-                </div>
-
-                <div class="faq-item">
-                    <details>
-                        <summary>How does the "Make an Offer" and 50/50 payment structure work?</summary>
-                        <p>We are always open to reasonable negotiation via DM. When an offer is agreed upon, we frequently offer a <strong>50/50 split payment option</strong>. You pay a 50% deposit upfront to secure the item, and the remaining 50% is paid only after you have viewed and approved the final pre-shipment quality video of your specific product.</p>
-                    </details>
-                </div>
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <h2 class="faq-question">
+                Are the designer bags and luxury items authentic?
+                <span class="faq-icon">+</span>
+            </h2>
+            <div class="faq-answer">
+                <p>Yes. Every piece in the Omega Hub Private Archive undergoes rigorous, multi-point authentication by luxury experts at our Dubai hub before being listed. We guarantee 100% authenticity for all brands, including Hermès, Chanel, and Louis Vuitton.</p>
             </div>
+        </div>
 
-            <!-- Category: Quality & Sourcing -->
-            <div class="faq-category">
-                <h3>Quality & Our Process</h3>
-                
-                <div class="faq-item">
-                    <details>
-                        <summary>What quality are the items you sell?</summary>
-                        <p>We source only the highest tier of premium AAA quality pieces. We want you to feel pure luxury the moment you unbox your package. Every detail, from the stitching to the premium packaging, is crafted to guarantee 100% client satisfaction.</p>
-                    </details>
-                </div>
-
-                <div class="faq-item">
-                    <details>
-                        <summary>How do I know what my item will look like before it arrives?</summary>
-                        <p>Total transparency is our standard. We utilize a strict <strong>Pre-Shipment Video Approval</strong> process. Before any item is boxed or handed over to FedEx, we record a high-definition video of your exact piece and send it to your DMs. Your package does not ship until you give us your final blessing.</p>
-                    </details>
-                </div>
-
-                <div class="faq-item">
-                    <details>
-                        <summary>Where do your items ship from?</summary>
-                        <p>We maintain our physical inventory inside state-of-the-art warehouses located in <strong>Dubai</strong> and <strong>Hong Kong</strong>. This global setup allows us to source the best premium items and ship them expediently to our clients worldwide.</p>
-                    </details>
-                </div>
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <h2 class="faq-question">
+                How do I purchase an item from the Vault?
+                <span class="faq-icon">+</span>
+            </h2>
+            <div class="faq-answer">
+                <p>We operate exclusively through a VIP Instagram Concierge model to ensure a personalized luxury experience. Simply click "DM TO NEGOTIATE" or "DM TO BUY" on any product, and our styling team will finalize your order securely via direct message.</p>
             </div>
+        </div>
 
-            <!-- Category: Shipping & Returns -->
-            <div class="faq-category">
-                <h3>Shipping & Returns</h3>
-
-                <div class="faq-item">
-                    <details>
-                        <summary>Do you ship worldwide and how long does it take?</summary>
-                        <p>Yes! While 95% of our clients are based in the USA, followed by Canada and Australia, we proudly offer global delivery. Once you approve your pre-shipment video, your package is dispatched via FedEx Expedited Shipping and typically arrives at your door within <strong>7 Working Days</strong>.</p>
-                    </details>
-                </div>
-
-                <div class="faq-item">
-                    <details>
-                        <summary>Will I have to pay customs duties or import taxes?</summary>
-                        <p>Because your items are shipped directly from our international vaults, your package may occasionally be subject to local customs fees. We optimize our shipping to minimize border friction, but any localized import duties mandated by your country are the responsibility of the buyer.</p>
-                    </details>
-                </div>
-
-                <div class="faq-item">
-                    <details>
-                        <summary>What is your return policy if I am not satisfied?</summary>
-                        <p>Your peace of mind is guaranteed. While our Video Approval process ensures clients are always thrilled with their items, we do offer a <strong>fully guaranteed return and refund policy</strong>. If you are dissatisfied upon receiving your piece, simply DM us to initiate an easy, hassle-free return and receive a full refund to your original payment method.</p>
-                    </details>
-                </div>
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <h2 class="faq-question">
+                Can I negotiate the price of a designer item?
+                <span class="faq-icon">+</span>
+            </h2>
+            <div class="faq-answer">
+                <p>Yes. We welcome private offers. Because we operate as a direct-to-buyer archive without traditional retail markups, we respect your budget and encourage reasonable negotiations on our vault pieces.</p>
             </div>
+        </div>
 
-        </section>
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+            <h2 class="faq-question">
+                How long does VIP shipping take to California and Florida?
+                <span class="faq-icon">+</span>
+            </h2>
+            <div class="faq-answer">
+                <p>We offer complimentary expedited shipping to the US. Once your item passes final quality inspection and packaging at our fulfillment center, it typically arrives to clients in California or Florida within 4 to 7 business days.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+            <h2 class="faq-question">
+                What is your return policy on archive pieces?
+                <span class="faq-icon">+</span>
+            </h2>
+            <div class="faq-answer">
+                <p>Due to the exclusive, highly sought-after nature of our sourced inventory, all private archive sales are final. However, we provide detailed high-resolution videos and condition reports via our Instagram DM concierge prior to purchase to ensure your complete satisfaction.</p>
+            </div>
+        </div>
+
+        <!-- CTA Box inside FAQ -->
+        <div class="faq-cta">
+            <h3>Still have questions?</h3>
+            <p>Our VIP Concierge team is available 24/7 to assist you with sourcing, authentication details, or shipping inquiries.</p>
+            <a href="https://ig.me/m/omegahubonline" target="_blank" class="btn-dm-light">Message Concierge</a>
+        </div>
 
     </main>
 
-    <!-- Footer Injection -->
     <div id="footer-placeholder"></div>
 
-    <!-- External Scripts -->
     <script src="header.js"></script>
     <script src="footer.js"></script>
 
+    <!-- Interactive Accordion Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other open items for a clean UI experience
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle the clicked item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
