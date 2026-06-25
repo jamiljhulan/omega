@@ -8,15 +8,15 @@ const footerHTML = `
         
         <div class="hub-footer-banner">
             <div class="hub-footer-banner-content">
-                <h2 class="hub-banner-title">SEE IT. WANT IT. <span class="hub-text-pink">DM US TO GET IT.</span></h2>
-                <p class="hub-banner-sub">Skip the cart. Slide into our DMs for exclusive drops, instant ordering, and VIP customer service.</p>
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="hub-banner-btn" aria-label="DM us on Instagram">
+                <h2 class="hub-banner-title">EFFORTLESS LUXURY. <span class="hub-text-pink">SECURE IT VIA VIP DM.</span></h2>
+                <p class="hub-banner-sub">Skip the waitlist. Contact our styling concierge via Instagram DM for private orders, Miami and LA exclusive drops, and white-glove service.</p>
+                <a href="https://ig.me/m/omegahubonline" target="_blank" class="hub-banner-btn" aria-label="DM our VIP styling concierge on Instagram">
                     <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
-                    DM @OMEGAHUBONLINE
+                    MESSAGE VIP CONCIERGE
                 </a>
             </div>
         </div>
@@ -25,37 +25,37 @@ const footerHTML = `
             <div class="hub-footer-grid">
                 
                 <div class="hub-footer-col hub-col-brand">
-                    <a href="/index.html" class="hub-footer-logo">OMEGA HUB</a>
-                    <p class="hub-footer-bio">Curating the ultimate "Fashion Girl" aesthetic. Premium designer bags, shoes, and accessories delivered straight to your door. Fast, flawless, and fashionable.</p>
-                    <p class="hub-trust-badge">🇺🇸 FAST & FREE US SHIPPING OVER $150</p>
+                    <a href="/index.html" class="hub-footer-logo" aria-label="Omega Hub - Luxury Fashion and Resort Wear">OMEGA HUB</a>
+                    <p class="hub-footer-bio">Omega Hub is the premier online destination curating the ultimate aesthetic for the coastal elite. Delivering premium designer bags, resort wear, and statement accessories directly to women in California, Florida, and across the US.</p>
+                    <p class="hub-trust-badge">🇺🇸 COMPLIMENTARY VIP SHIPPING TO CA & FL</p>
                 </div>
 
                 <div class="hub-footer-col">
                     <h3 class="hub-footer-heading">Shop The Look</h3>
                     <ul class="hub-footer-links">
-                        <li><a href="new-in.html">New Arrivals 🔥</a></li>
-                        <li><a href="bags.html">Designer Bags</a></li>
-                        <li><a href="shoes.html">Luxury Shoes</a></li>
-                        <li><a href="watches.html">Premium Watches</a></li>
-                        <li><a href="sale.html">Clearance Sale</a></li>
+                        <li><a href="new-in.html">The Resort Edit 🌴</a></li>
+                        <li><a href="bags.html">Designer Handbags</a></li>
+                        <li><a href="shoes.html">Luxe Footwear</a></li>
+                        <li><a href="watches.html">Fine Timepieces</a></li>
+                        <li><a href="sale.html">Private Archive</a></li>
                     </ul>
                 </div>
 
                 <div class="hub-footer-col">
-                    <h3 class="hub-footer-heading">Customer Care</h3>
+                    <h3 class="hub-footer-heading">Client Concierge</h3>
                     <ul class="hub-footer-links">
-                        <li><a href="shipping.html">US Shipping Policy</a></li>
+                        <li><a href="shipping.html">VIP US Shipping Policy</a></li>
                         <li><a href="returns.html">Returns & Exchanges</a></li>
                         <li><a href="track-order.html">Track Your Order</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="faqs.html">Luxury Service FAQs</a></li>
                     </ul>
                 </div>
 
                 <div class="hub-footer-col">
-                    <h3 class="hub-footer-heading">Stay Connected</h3>
+                    <h3 class="hub-footer-heading">The Inner Circle</h3>
                     <ul class="hub-footer-links">
                         <li><a href="https://instagram.com/omegahubonline" target="_blank">Instagram (@omegahubonline)</a></li>
-                        <li><a href="mailto:hello@omegahub.online">hello@omegahub.online</a></li>
+                        <li><a href="https://vimeo.com/omegafashiononline">Videos</a></li>
                         <li><a href="mailto:hello@omegahubonline@gmail.com">omegahubonline@gmail.com</a></li>
                     </ul>
                 </div>

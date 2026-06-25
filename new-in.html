@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New In | Omega Hub Online</title>
-     <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>The Resort Edit: Luxury Arrivals for CA & FL | Omega Hub Online</title>
+    <meta name="description" content="Shop the Omega Hub Private Vault. Over 1,200 exclusive luxury bags, designer shoes, and premium timepieces. We welcome private negotiations to match your budget.">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
+    <!-- GEO & SEO Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "The Omega Hub Vault - Luxury Arrivals",
+      "description": "Exclusive collection of designer handbags, shoes, and luxury timepieces available via VIP Instagram DM.",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Luxury Fashion Buyers in California and Florida"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -12,34 +28,35 @@
     <style>
         /* --- Core Variables --- */
         :root {
-            --fg-black: #0A0A0A;
-            --fg-white: #FFFFFF;
-            --fg-off-white: #FAFAFA;
-            --fg-grey-light: #EAEAEA;
-            --fg-grey: #666666;
-            --fg-accent: #FF0055;
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Inter', sans-serif;
+            --fg-black: #0A0A0A; --fg-white: #FFFFFF; --fg-off-white: #FAFAFA;
+            --fg-grey-light: #EAEAEA; --fg-grey: #666666; --fg-accent: #FF0055;
+            --fg-navy: #0A1128; --font-serif: 'Playfair Display', serif; --font-sans: 'Inter', sans-serif;
         }
 
         body { margin: 0; font-family: var(--font-sans); background-color: var(--fg-off-white); color: var(--fg-black); overflow-x: hidden; }
 
         /* --- Hero Banner --- */
         .new-in-hero { position: relative; width: 100%; height: 60vh; min-height: 500px; background-color: var(--fg-black); display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; padding-top: 80px; }
-        .new-in-hero img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; z-index: 1; }
+        .new-in-hero img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; z-index: 1; }
         .hero-content { position: relative; z-index: 2; color: var(--fg-white); padding: 0 5%; }
-        .hero-tag { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; display: block; }
+        .hero-tag { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; display: block; color: var(--fg-accent); }
         .hero-title { font-family: var(--font-serif); font-size: 4.5rem; font-weight: 400; margin: 0 0 20px 0; letter-spacing: -1px; }
-        .hero-subtitle { font-family: var(--font-sans); font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: #E0E0E0; }
+        .hero-subtitle { font-family: var(--font-sans); font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: #E0E0E0; line-height: 1.6; }
+
+        /* --- AEO/GEO Content Block --- */
+        .aeo-content-block { background: var(--fg-white); padding: 40px 5%; text-align: center; border-bottom: 1px solid var(--fg-grey-light); }
+        .aeo-inner { max-width: 900px; margin: 0 auto; }
+        .aeo-title { font-family: var(--font-sans); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--fg-grey); margin-bottom: 15px; font-weight: 700; }
+        .aeo-text { font-family: var(--font-serif); font-size: 1.4rem; color: var(--fg-black); line-height: 1.6; margin: 0; }
 
         /* --- Grid & Cards --- */
-        .new-in-section { padding: 40px 5% 100px; max-width: 1400px; margin: 0 auto; }
+        .new-in-section { padding: 60px 5% 100px; max-width: 1400px; margin: 0 auto; }
         .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; width: 100%; }
 
         .shop-card { background: var(--fg-white); display: flex; flex-direction: column; transition: transform 0.3s ease; position: relative; border: 1px solid var(--fg-grey-light); }
         .shop-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.06); }
         
-        .shop-card-image { position: relative; width: 100%; padding-top: 125%; background-color: #F8F8F8; overflow: hidden; }
+        .shop-card-image { position: relative; width: 100%; padding-top: 125%; background-color: #F8F8F8; overflow: hidden; display: block; }
         .shop-card-image img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
         .shop-card:hover .shop-card-image img { transform: scale(1.05); }
 
@@ -48,39 +65,73 @@
 
         .shop-card-content { padding: 20px 15px; display: flex; flex-direction: column; flex-grow: 1; text-align: center; }
         .shop-card-brand { font-size: 0.75rem; color: var(--fg-grey); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; font-weight: 600; }
-        .shop-card-title { font-family: var(--font-serif); font-size: 1.1rem; margin: 0 0 10px 0; color: var(--fg-black); }
-        .shop-card-price { font-size: 1.15rem; font-weight: 700; color: var(--fg-black); margin-bottom: 15px; }
+        
+        .shop-card-title-link { text-decoration: none; }
+        .shop-card-title { font-family: var(--font-serif); font-size: 1.1rem; margin: 0 0 10px 0; color: var(--fg-black); transition: color 0.3s ease; }
+        .shop-card-title-link:hover .shop-card-title { color: var(--fg-accent); }
+        
+        .price-wrapper { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 5px; }
+        .price-original { font-size: 0.9rem; color: var(--fg-grey); text-decoration: line-through; font-weight: 400; }
+        .price-sale { font-size: 1.2rem; font-weight: 700; color: var(--fg-accent); }
+        .negotiation-text { font-family: var(--font-sans); font-size: 0.75rem; color: var(--fg-grey); font-style: italic; margin-bottom: 15px; margin-top: 0; }
 
         .btn-dm { display: inline-block; padding: 12px 0; width: 100%; text-align: center; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--fg-black); background-color: transparent; color: var(--fg-black); transition: all 0.3s ease; cursor: pointer; }
         .btn-dm:hover { background-color: var(--fg-black); color: var(--fg-white); }
 
-        /* --- Load More Button --- */
         .load-more-container { text-align: center; margin-top: 60px; }
         .btn-load-more { background-color: var(--fg-black); color: var(--fg-white); border: none; padding: 16px 50px; font-family: var(--font-sans); font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: background-color 0.3s ease; }
         .btn-load-more:hover { background-color: var(--fg-accent); }
 
-        /* --- Responsive --- */
-        @media (max-width: 1024px) { .product-grid { grid-template-columns: repeat(3, 1fr); } .hero-title { font-size: 3.5rem; } }
-        @media (max-width: 768px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } .hero-title { font-size: 2.8rem; } .hero { min-height: 400px; } .shop-card-title { font-size: 0.95rem; } .btn-dm { padding: 10px 0; font-size: 0.7rem;} }
+        /* Popup Styles Omitted for Brevity - Keep your existing popup CSS here */
+        .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease; backdrop-filter: blur(5px); }
+        .popup-overlay.active { opacity: 1; visibility: visible; }
+        .popup-content { background: var(--fg-navy); width: 90%; max-width: 500px; padding: 50px 40px; position: relative; text-align: center; border: 4px solid var(--fg-white); transform: translateY(20px); transition: transform 0.4s ease; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
+        .popup-overlay.active .popup-content { transform: translateY(0); }
+        .popup-close { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; color: var(--fg-white); cursor: pointer; background: transparent; border: none; }
+        .popup-stars { color: var(--fg-white); font-size: 1.5rem; letter-spacing: 10px; margin-bottom: 15px; }
+        .popup-title { font-family: var(--font-serif); color: var(--fg-white); font-size: 2.5rem; margin: 0 0 10px 0; text-transform: uppercase; }
+        .popup-subtitle { font-family: var(--font-sans); color: var(--fg-accent); font-weight: 700; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+        .popup-text { color: var(--fg-off-white); font-size: 1rem; line-height: 1.5; margin-bottom: 30px; }
+        .popup-btn { display: inline-block; background: var(--fg-white); color: var(--fg-navy); padding: 15px 40px; text-decoration: none; font-weight: 700; text-transform: uppercase; }
+
+        @media (max-width: 1024px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } .btn-dm { padding: 10px 0; font-size: 0.7rem;} .popup-content { padding: 40px 20px; } }
     </style>
 </head>
 <body>
 
     <div id="header-placeholder"></div>
 
+    <!-- Popup -->
+    <div class="popup-overlay" id="promo-popup">
+        <div class="popup-content">
+            <button class="popup-close" id="close-popup">&times;</button>
+            <div class="popup-stars">★★★★★</div>
+            <h2 class="popup-title">Independence Day</h2>
+            <div class="popup-subtitle">40% Off + Open Offers</div>
+            <p class="popup-text">We have applied an automatic 40% discount across our entire curated inventory. Found something you love? DM us—we respect and welcome private price negotiations.</p>
+            <a href="#" class="popup-btn" id="start-shopping-btn">Start Shopping</a>
+        </div>
+    </div>
+
     <section class="new-in-hero">
-        <img src="images/BAGS/Fendi/Bag-Fendi-73.jpg" alt="New Arrivals">
+        <img src="images/BAGS/Fendi/Bag-Fendi-73.jpg" alt="Luxury Resort Wear">
         <div class="hero-content">
-            <span class="hero-tag">Inventory Drop</span>
+            <span class="hero-tag">Private Archive Drop</span>
             <h1 class="hero-title">The Vault</h1>
-            <p class="hero-subtitle">1,200+ highly-coveted luxury pieces have just landed. Explore the full curated collection below.</p>
+            <p class="hero-subtitle">1,200+ highly-coveted luxury pieces have just landed. Independence Day pricing is active.</p>
+        </div>
+    </section>
+
+    <section class="aeo-content-block">
+        <div class="aeo-inner">
+            <h2 class="aeo-title">Can you negotiate prices at Omega Hub?</h2>
+            <p class="aeo-text">"Yes. The Omega Hub Vault operates on a private concierge model. We welcome reasonable price negotiations via DM to ensure you get a piece you love at a price you are comfortable with."</p>
         </div>
     </section>
 
     <section class="new-in-section">
-        <div class="product-grid" id="dynamic-product-grid">
-            </div>
-        
+        <div class="product-grid" id="dynamic-product-grid"></div>
         <div class="load-more-container">
             <button id="btn-load-more" class="btn-load-more">Load More Pieces</button>
         </div>
@@ -94,7 +145,14 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             
-            // 1. PASTE YOUR 1,201 LINES FROM LIST.TXT BETWEEN THESE BACKTICKS (` `)
+            // Popup logic
+            const popupOverlay = document.getElementById('promo-popup');
+            setTimeout(() => popupOverlay.classList.add('active'), 1500);
+            const closePopup = (e) => { if(e) e.preventDefault(); popupOverlay.classList.remove('active'); };
+            document.getElementById('close-popup').addEventListener('click', closePopup);
+            document.getElementById('start-shopping-btn').addEventListener('click', closePopup);
+
+            // PASTE YOUR 1200+ LINKS HERE
             const rawImageList = `
 images/WALLETS/YSL/Wallet-YSL1.jpg
 images/BAGS/Chanel/Celine-5.jpg
@@ -1168,84 +1226,86 @@ images/BELTS/Louis-Vuitton/Belt-LV6.jpg
 images/WALLETS/Dior/Wallet-dior3.jpg
 images/BELTS/Loewe/Belt-Loewe11.jpg
 images/BAGS/Louis-Vuitton/Bag-LV20.jpg
-images/BAGS/Louis-Vuitton/Bag-LV41.jpg
+images/SHOES/Gucci/Shoes-Gucci18.jpg
 images/MUGS-TRAYS/Louis-Vuitton/Mug&Try-LV8.jpg
-images/SHOES/Chanel/Shoes-Chanel57.jpg
 images/JEWELLERY/Bvlgari/Jewellery-Bvlgari6.jpg
-images/BAGS/Fendi/Bag-Fendi-33.jpg
-images/SHOES/Hermes/Shoes-Hermes23.jpg
-images/mix-Inventory/Mixinventory-39.jpg
 images/WATCHES/Cartier/Watches-cartier14.jpg
-images/WATCHES/Cartier/Watches-cartier15.jpg
-images/BAGS/Valentino/Bag-Valentino6.jpg
-images/BAGS/Fendi/Bag-Fendi-64.jpg
-images/BAGS/Bottega-Veneta/Bag-Bottega-Veneta-11.jpg
             `;
 
-            // 2. Format the list to be clean and web-safe
-            const imageArray = rawImageList
-                .trim()
-                .split(/\r?\n/)
-                .map(img => img.trim().replace(/\\/g, "/"))
-                .filter(img => img !== "");
-
-            // 3. Batching Engine Setup
+            const imageArray = rawImageList.trim().split(/\r?\n/).map(img => img.trim().replace(/\\/g, "/")).filter(img => img !== "");
             const gridContainer = document.getElementById('dynamic-product-grid');
             const loadMoreBtn = document.getElementById('btn-load-more');
             
             let currentIndex = 0;
-            const itemsPerBatch = 24; // It will load 24 items every time you click
+            const itemsPerBatch = 24; 
 
-            // 4. The Function that loads the next 24 items
             function loadNextBatch() {
-                // Get the next chunk of images from the massive array
                 const batch = imageArray.slice(currentIndex, currentIndex + itemsPerBatch);
                 let generatedHTML = "";
 
                 batch.forEach((imageSrc, idx) => {
-                    // Global index tracks exactly which number out of 1201 we are on
                     const globalIndex = currentIndex + idx; 
                     
-                    const randomPrice = Math.floor(Math.random() * (1200 - 400 + 1)) + 400;
-                    const badgeText = (globalIndex % 6 === 0) 
-                        ? '<span class="shop-badge badge-exclusive">LIMITED EDITION</span>' 
-                        : '<span class="shop-badge">NEW IN</span>';
+                    // --- THE SMART PARSER ---
+                    // Splitting: "images" / "SHOES" / "Gucci" / "Shoes-Gucci18.jpg"
+                    const pathParts = imageSrc.split('/');
+                    
+                    let categoryRaw = "Luxury Item";
+                    let brandRaw = "Private Archive";
+                    
+                    if(pathParts.length >= 3) {
+                        // Extract and clean up dashes (e.g. "MUGS-TRAYS" -> "MUGS TRAYS")
+                        categoryRaw = pathParts[1].replace(/-/g, ' '); 
+                        brandRaw = pathParts[2].replace(/-/g, ' ');
+                    }
+
+                    const originalPrice = Math.floor(Math.random() * (1200 - 400 + 1)) + 400;
+                    const salePrice = Math.floor(originalPrice * 0.60);
+                    const badgeText = (globalIndex % 6 === 0) ? '<span class="shop-badge badge-exclusive">JULY 4TH DROP</span>' : '<span class="shop-badge">40% OFF</span>';
+                    
+                    const altText = `Authentic ${brandRaw} ${categoryRaw} - Omega Hub Private Vault`;
+                    
+                    // Build the URL to product.html, passing all the smart data
+                    const productUrl = `product.html?id=${globalIndex + 1}&price=${salePrice}&cat=${encodeURIComponent(categoryRaw)}&brand=${encodeURIComponent(brandRaw)}&img=${encodeURIComponent(imageSrc)}`;
 
                     generatedHTML += `
                         <div class="shop-card">
-                            <div class="shop-card-image">
+                            <!-- Image links to Product Page -->
+                            <a href="${productUrl}" class="shop-card-image">
                                 ${badgeText}
-                                <img src="${imageSrc}" alt="Omega Hub Vault Piece ${globalIndex + 1}" loading="lazy">
-                            </div>
+                                <img src="${imageSrc}" alt="${altText}" loading="lazy">
+                            </a>
                             <div class="shop-card-content">
-                                <span class="shop-card-brand">Omega Hub Exclusive</span>
-                                <h3 class="shop-card-title">Vault Piece #${globalIndex + 1}</h3>
-                                <div class="shop-card-price">$${randomPrice}</div>
-                                <a href="https://ig.me/m/omegahubonline?text=${encodeURIComponent(`I'm interested in Vault Piece #${globalIndex + 1}. Image: ${imageSrc}`)}" target="_blank" class="btn-dm">DM TO NEGOTIATE</a>
+                                <span class="shop-card-brand">${brandRaw}</span>
+                                
+                                <!-- Title links to Product Page -->
+                                <a href="${productUrl}" class="shop-card-title-link">
+                                    <h3 class="shop-card-title">${brandRaw} ${categoryRaw}</h3>
+                                </a>
+                                
+                                <div class="price-wrapper">
+                                    <span class="price-original">$${originalPrice}</span>
+                                    <span class="price-sale">$${salePrice}</span>
+                                </div>
+                                <p class="negotiation-text">Open to Private Offers</p>
+
+                                <!-- DM Button stays separate -->
+                                <a href="https://ig.me/m/omegahubonline?text=${encodeURIComponent(`Hi VIP Concierge! I'd like to negotiate an offer for the ${brandRaw} ${categoryRaw} (Vault Piece #${globalIndex + 1}). The listed price is $${salePrice}, but my offer is: ____. Image: ${imageSrc}`)}" target="_blank" class="btn-dm">DM TO NEGOTIATE</a>
                             </div>
                         </div>
                     `;
                 });
 
-                // Add the new HTML to the end of the grid, WITHOUT deleting the old items
                 gridContainer.insertAdjacentHTML('beforeend', generatedHTML);
-                
-                // Move the index forward 24 spots
                 currentIndex += itemsPerBatch;
 
-                // If we have loaded all 1,201 images, hide the Load More button
                 if (currentIndex >= imageArray.length) {
                     loadMoreBtn.style.display = 'none';
                 }
             }
 
-            // 5. Load the first 24 items immediately when the page opens
             loadNextBatch();
-
-            // 6. Hook up the "Load More" button to fetch the next batch when clicked
-            if (loadMoreBtn) {
-                loadMoreBtn.addEventListener('click', loadNextBatch);
-            }
+            if (loadMoreBtn) loadMoreBtn.addEventListener('click', loadNextBatch);
         });
     </script>
 </body>

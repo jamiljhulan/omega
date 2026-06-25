@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The IT-List | Omega Hub Online</title>
+    <title>Omega Hub Online | Luxury Fashion Archive & Resort Wear</title>
+    <meta name="description" content="Access an elite archive of over 1,200 curated designer handbags, footwear, and luxury watches. Enjoy complimentary VIP shipping across California and Florida.">
     
     <link rel="icon" href="images/favicon.png" type="image/png">
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Store",
+          "@id": "https://omegahub.online/#store",
+          "name": "Omega Hub Online",
+          "url": "https://omegahub.online",
+          "telephone": "",
+          "priceRange": "$$$$",
+          "image": "https://omegahub.online/images/mix-Inventory/Mixinventory-1.jpg",
+          "description": "Exclusive luxury archive offering premium designer bags, luxury footwear, and statements watches via private styling concierge.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Miami",
+            "addressRegion": "FL",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {"@type": "AdministrativeArea", "name": "California"},
+            {"@type": "AdministrativeArea", "name": "Florida"}
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://omegahub.online/#website",
+          "url": "https://omegahub.online",
+          "name": "Omega Hub Online",
+          "description": "Luxury Resort Wear & Designer Collections"
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -35,12 +71,38 @@
             font-family: var(--font-sans);
             background-color: var(--fg-off-white);
             color: var(--fg-black);
-            overflow-x: hidden; /* Prevents horizontal scrolling issues */
+            overflow-x: hidden;
         }
         
-        /* Universal box sizing */
         *, *::before, *::after {
             box-sizing: border-box;
+        }
+
+        /* --- AEO Answer Block Styling --- */
+        .aeo-home-block {
+            background-color: var(--fg-white);
+            padding: 50px 4%;
+            border-bottom: 1px solid var(--fg-border);
+            text-align: center;
+        }
+        .aeo-home-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .aeo-home-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--fg-grey);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .aeo-home-text {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: var(--fg-black);
+            margin: 0;
         }
     </style>
 </head>
@@ -53,41 +115,48 @@
         <div class="fg-hero-container">
             
             <div class="fg-hero-content">
-                <div class="fg-badge">The IT-List</div>
-                <h1 class="fg-title">Curated for the<br><em>Fashion Obsessed.</em></h1>
-                <p class="fg-subtitle">Discover premium designer bags, iconic shoes, and statement accessories. Elevate your aesthetic with fast, seamless US shipping.</p>
+                <div class="fg-badge">The Private Archive</div>
+                <h1 class="fg-title">Curated for the<br><em>Luxury Elite.</em></h1>
+                <p class="fg-subtitle">Unlocking an elite, private catalog of over 1,200 designer handbags, iconic resort footwear, and premium timepieces. Tailored for coastal living with complimentary shipping to California and Florida.</p>
                 
                 <div class="fg-actions">
-                    <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-btn-primary">
-                        DM TO ORDER
+                    <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-btn-primary" aria-label="Contact styling concierge and shop via Instagram DM">
+                        VIP CONCIERGE DM
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
-                    <a href="new-in.html" class="fg-btn-secondary">Explore Feed</a>
+                    <a href="new-in.html" class="fg-btn-secondary" aria-label="Explore the luxury arrivals feed">The Resort Edit</a>
                 </div>
                 
                 <div class="fg-trust-signals">
-                    <span>🇺🇸 Free US Shipping</span>
+                    <span>🌴 VIP Shipping to CA & FL</span>
                     <span class="dot">•</span>
-                    <span>⭐ 5-Star Quality</span>
+                    <span>✨ Authenticity Guaranteed</span>
                     <span class="dot">•</span>
-                    <span>🔒 Secure DM Ordering</span>
+                    <span>🤝 Private Offers Welcomed</span>
                 </div>
             </div>
 
             <div class="fg-hero-visuals">
                 <div class="fg-img-large">
-                    <img src="images/mix-Inventory/Mixinventory-1.jpg" alt="Omega Hub Premium Fashion Collection">
+                    <img src="images/mix-Inventory/Mixinventory-1.jpg" alt="Omega Hub Premium Coastal Fashion Collection Portfolio">
                 </div>
                 <div class="fg-img-stack">
                     <div class="fg-img-small">
-                        <img src="images/BAGS/Chanel/Celine-1.jpg" alt="Designer Chanel Bag">
+                        <img src="images/BAGS/Chanel/Celine-1.jpg" alt="Fine Designer Quilted Handbag Collection">
                     </div>
                     <div class="fg-img-small">
-                        <img src="images/SHOES/Christian-Louboutin/Shoes-ChristianLouboutin1.jpg" alt="Christian Louboutin Red Bottoms">
+                        <img src="images/SHOES/Christian-Louboutin/Shoes-ChristianLouboutin1.jpg" alt="Exclusive Luxury Red Bottom Evening Heels">
                     </div>
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section class="aeo-home-block">
+        <div class="aeo-home-inner">
+            <div class="aeo-home-tag">What is Omega Hub Online?</div>
+            <p class="aeo-home-text">"Omega Hub Online is a premier private boutique archive specializing in authentic designer accessories and luxury resort fashion. Operating via a personalized Instagram concierge, we source rare and high-demand style statements for fashion-conscious buyers in luxury markets like Miami, Palm Beach, and Los Angeles."</p>
         </div>
     </section>
 
@@ -128,7 +197,7 @@
 
         .fg-title {
             font-family: var(--font-serif);
-            font-size: clamp(3rem, 5vw, 4.5rem); /* Fluid typography */
+            font-size: clamp(3rem, 5vw, 4.5rem); 
             line-height: 1.05;
             color: var(--fg-black);
             margin: 0 0 25px 0;
@@ -151,7 +220,7 @@
             gap: 20px;
             align-items: center;
             margin-bottom: 40px;
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            flex-wrap: wrap; 
         }
 
         .fg-btn-primary {
@@ -277,55 +346,55 @@
             .fg-btn-primary, .fg-btn-secondary { width: 100%; text-align: center; }
             .fg-img-large { height: 300px; }
             .fg-img-stack { height: 150px; }
-            .dot { display: none; } /* Hide dots on very small screens for better wrapping */
+            .dot { display: none; }
         }
     </style>
 
     <section class="fg-collections-section">
         <div class="fg-collections-container">
             <div class="fg-section-header">
-                <h2 class="fg-section-title">The Collections</h2>
-                <p class="fg-section-subtitle">Curated categories for the modern wardrobe.</p>
+                <h2 class="fg-section-title">The Curated Archive</h2>
+                <p class="fg-section-subtitle">Pillars of the modern high-end wardrobe.</p>
             </div>
 
             <div class="fg-collections-grid">
                 <a href="bags.html" class="fg-category-card">
                     <div class="fg-category-img-wrapper">
-                        <img src="images/BAGS/Hermes/Bag-Hermes1.jpg" alt="Premium Designer Bags" loading="lazy">
+                        <img src="images/BAGS/Hermes/Bag-Hermes1.jpg" alt="Authentic Designer Luxury Handbags Portfolio" loading="lazy">
                     </div>
                     <div class="fg-category-content">
-                        <h3 class="fg-category-name">Designer Bags</h3>
-                        <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        <h3 class="fg-category-name">Designer Handbags</h3>
+                        <span class="fg-category-link">Explore Collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                     </div>
                 </a>
 
                 <a href="shoes.html" class="fg-category-card">
                     <div class="fg-category-img-wrapper">
-                        <img src="images/SHOES/Jimmy-Choo/Shoes-JimmyChoo1.jpg" alt="Luxury Shoes and Heels" loading="lazy">
+                        <img src="images/SHOES/Jimmy-Choo/Shoes-JimmyChoo1.jpg" alt="Premium Italian Footwear and Luxury Stilettos" loading="lazy">
                     </div>
                     <div class="fg-category-content">
-                        <h3 class="fg-category-name">Luxury Shoes</h3>
-                        <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        <h3 class="fg-category-name">Luxe Footwear</h3>
+                        <span class="fg-category-link">Explore Feed <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                     </div>
                 </a>
 
                 <a href="watches.html" class="fg-category-card">
                     <div class="fg-category-img-wrapper">
-                        <img src="images/WATCHES/Cartier/Watches-cartier1.jpg" alt="Premium Designer Watches" loading="lazy">
+                        <img src="images/WATCHES/Cartier/Watches-cartier1.jpg" alt="Fine Timepieces and Haute Horlogerie Watch Collection" loading="lazy">
                     </div>
                     <div class="fg-category-content">
-                        <h3 class="fg-category-name">Premium Watches</h3>
-                        <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        <h3 class="fg-category-name">Fine Timepieces</h3>
+                        <span class="fg-category-link">Explore Vault <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                     </div>
                 </a>
 
                 <a href="sale.html" class="fg-category-card">
                     <div class="fg-category-img-wrapper">
-                        <img src="images/GLASSES/Prada/Glasses-Prada1.jpg" alt="Statement Sunglasses" loading="lazy">
+                        <img src="images/GLASSES/Prada/Glasses-Prada1.jpg" alt="Statement Sunglasses and Premium Fashion Eyewear" loading="lazy">
                     </div>
                     <div class="fg-category-content">
-                        <h3 class="fg-category-name">Statement Glasses</h3>
-                        <span class="fg-category-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        <h3 class="fg-category-name">Statement Eyewear</h3>
+                        <span class="fg-category-link">Explore Archive <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                     </div>
                 </a>
             </div>
@@ -412,15 +481,15 @@
         @media (max-width: 600px) {
             .fg-collections-section { padding: 60px 5%; }
             .fg-collections-grid { grid-template-columns: 1fr; gap: 50px; }
-            .fg-category-card { max-width: 450px; margin: 0 auto; width: 100%; } /* Prevents giant cards on tablet */
+            .fg-category-card { max-width: 450px; margin: 0 auto; width: 100%; } 
             .fg-category-img-wrapper { aspect-ratio: 4 / 5; }
         }
     </style>
 
     <section class="fg-trending-section" id="trending">
         <div class="fg-trending-header">
-            <h2 class="fg-section-title">Trending Now</h2>
-            <p class="fg-section-subtitle">The pieces dominating our DMs right now.</p>
+            <h2 class="fg-section-title">The Resort Edit Portfolio</h2>
+            <p class="fg-section-subtitle">High-demand archive pieces currently in negotiation.</p>
         </div>
 
         <div class="fg-carousel-wrapper">
@@ -428,28 +497,28 @@
                 <div class="fg-product-card glass-effect">
                     <div class="fg-product-image">
                         <div class="fg-tag">Selling Fast</div>
-                        <img src="images/BAGS/Bottega-Veneta/Bag-Bottega-Veneta-1.jpg" alt="Bottega Veneta Designer Bag" loading="lazy">
+                        <img src="images/BAGS/Bottega-Veneta/Bag-Bottega-Veneta-1.jpg" alt="Authentic Bottega Veneta Woven Leather Crossbody Bag" loading="lazy">
                     </div>
                     <div class="fg-product-info">
                         <span class="fg-brand">Bottega Veneta</span>
                         <h3 class="fg-product-title">Woven Leather Crossbody</h3>
                         <div class="fg-product-price">$950</div>
                         <div class="fg-product-footer">
-                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                            <a href="https://ig.me/m/omegahubonline?text=I'm%20interested%20in%20negotiating%20the%20Bottega%20Veneta%20Crossbody." target="_blank" class="fg-dm-btn">DM TO NEGOTIATE</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="fg-product-card glass-effect">
                     <div class="fg-product-image">
-                        <img src="images/SHOES/Gucci/Shoes-Gucci1.jpg" alt="Gucci Luxury Shoes" loading="lazy">
+                        <img src="images/SHOES/Gucci/Shoes-Gucci1.jpg" alt="Premium Gucci Classic Monogram Loafers" loading="lazy">
                     </div>
                     <div class="fg-product-info">
                         <span class="fg-brand">Gucci</span>
                         <h3 class="fg-product-title">Classic Monogram Loafers</h3>
                         <div class="fg-product-price">$780</div>
                         <div class="fg-product-footer">
-                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                            <a href="https://ig.me/m/omegahubonline?text=I'm%20interested%20in%20negotiating%20the%20Gucci%20Monogram%20Loafers." target="_blank" class="fg-dm-btn">DM TO NEGOTIATE</a>
                         </div>
                     </div>
                 </div>
@@ -457,50 +526,50 @@
                 <div class="fg-product-card glass-effect">
                     <div class="fg-product-image">
                         <div class="fg-tag fg-tag-new">Just Dropped</div>
-                        <img src="images/GLASSES/OffWhite/Glasses-OffWhite1.jpg" alt="Off-White Statement Glasses" loading="lazy">
+                        <img src="images/GLASSES/OffWhite/Glasses-OffWhite1.jpg" alt="Authentic Off-White Virgil Statement Shades" loading="lazy">
                     </div>
                     <div class="fg-product-info">
                         <span class="fg-brand">Off-White</span>
                         <h3 class="fg-product-title">Virgil Statement Shades</h3>
                         <div class="fg-product-price">$450</div>
                         <div class="fg-product-footer">
-                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                            <a href="https://ig.me/m/omegahubonline?text=I'm%20interested%20in%20negotiating%20the%20Off-White%20Shades." target="_blank" class="fg-dm-btn">DM TO NEGOTIATE</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="fg-product-card glass-effect">
                     <div class="fg-product-image">
-                        <img src="images/WATCHES/Patek-Philippe/Watches-PatekPhilippe1.jpg" alt="Patek Philippe Premium Watch" loading="lazy">
+                        <img src="images/WATCHES/Patek-Philippe/Watches-PatekPhilippe1.jpg" alt="Rare Patek Philippe Nautilus Luxury Edition Watch" loading="lazy">
                     </div>
                     <div class="fg-product-info">
                         <span class="fg-brand">Patek Philippe</span>
                         <h3 class="fg-product-title">Nautilus Premium Edition</h3>
                         <div class="fg-product-price">$1,250</div>
                         <div class="fg-product-footer">
-                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                            <a href="https://ig.me/m/omegahubonline?text=I'm%20interested%20in%20negotiating%20the%20Patek%20Philippe%20Nautilus." target="_blank" class="fg-dm-btn">DM TO NEGOTIATE</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="fg-product-card glass-effect">
                     <div class="fg-product-image">
-                        <img src="images/WALLETS/Louis-Vuitton/Wallet-LV1.jpg" alt="Louis Vuitton Monogram Wallet" loading="lazy">
+                        <img src="images/WALLETS/Louis-Vuitton/Wallet-LV1.jpg" alt="Authentic Louis Vuitton Monogram Canvas Wallet" loading="lazy">
                     </div>
                     <div class="fg-product-info">
                         <span class="fg-brand">Louis Vuitton</span>
                         <h3 class="fg-product-title">Monogram Canvas Wallet</h3>
                         <div class="fg-product-price">$520</div>
                         <div class="fg-product-footer">
-                            <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-dm-btn">DM TO BUY</a>
+                            <a href="https://ig.me/m/omegahubonline?text=I'm%20interested%20in%20negotiating%20the%20Louis%20Vuitton%20Canvas%20Wallet." target="_blank" class="fg-dm-btn">DM TO NEGOTIATE</a>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="fg-carousel-nav">
-                <button class="fg-nav-arrow" id="scroll-left" aria-label="Scroll Left">←</button>
-                <button class="fg-nav-arrow" id="scroll-right" aria-label="Scroll Right">→</button>
+                <button class="fg-nav-arrow" id="scroll-left" aria-label="Scroll Carousel Left">←</button>
+                <button class="fg-nav-arrow" id="scroll-right" aria-label="Scroll Carousel Right">→</button>
             </div>
         </div>
     </section>
@@ -573,26 +642,26 @@
         <div class="fg-trust-container">
             <div class="fg-trust-content">
                 <div class="fg-trust-badge">The Omega Standard</div>
-                <h2 class="fg-trust-title">Uncompromising Quality.<br>Verified Authenticity.</h2>
+                <h2 class="fg-trust-title">Uncompromising Curation.<br>Verified Authenticity.</h2>
                 <p class="fg-trust-desc">
-                    We don't just ship boxes; we deliver an experience. Every designer piece is rigorously inspected by our specialists in our Dubai fulfillment center before it ever reaches your doorstep in the US. 
+                    We don't just ship boxes; we deliver an exclusive luxury asset. Every designer item is rigorously authenticated and quality-checked by specialized experts before being securely transferred to our distribution centers for priority handling to the US. 
                 </p>
                 <ul class="fg-trust-list">
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>100% Quality Checked & Verified</span></li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Premium Packaging & Dustbags Included</span></li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Fully Tracked Expedited US Shipping</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>100% Quality Inspected & Certified Fine Archive Pieces</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Bespoke Luxury Outer Box & Protective Dustbags Included</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Fully Tracked Signature Priority Shipping to California & Florida</span></li>
                 </ul>
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-trust-btn">Ask Us About Our Process</a>
+                <a href="https://ig.me/m/omegahubonline?text=Hi!%20I'd%20like%20to%20know%20more%20about%20your%20luxury%20authentication%20and%20sourcing%20process." target="_blank" class="fg-trust-btn">Learn Sourcing Process</a>
             </div>
 
             <div class="fg-trust-visual">
                 <div class="fg-trust-img-wrapper">
-                    <img src="images/mix-Inventory/Mixinventory-2.jpg" alt="Omega Hub Quality Packaging Process" loading="lazy">
+                    <img src="images/mix-Inventory/Mixinventory-2.jpg" alt="Omega Hub Pristine Luxury Packaging and Shipping Inspection Quality Process" loading="lazy">
                     <div class="fg-floating-card">
                         <span class="fg-card-icon">✈️</span>
                         <div class="fg-card-text">
-                            <strong>Dispatching Daily</strong>
-                            <span>Dubai → USA</span>
+                            <strong>Dispatching Globally</strong>
+                            <span>Archive Hub → USA</span>
                         </div>
                     </div>
                 </div>
@@ -636,7 +705,7 @@
             .fg-trust-desc { max-width: 100%; }
             .fg-trust-btn { width: 100%; text-align: center; }
             .fg-floating-card {
-                bottom: 20px; left: 5%; right: 5%; width: 90%; /* Forces card to fit inside mobile view safely */
+                bottom: 20px; left: 5%; right: 5%; width: 90%; 
                 justify-content: center;
             }
         }
@@ -644,8 +713,8 @@
 
     <section class="fg-reviews-section">
         <div class="fg-reviews-header">
-            <h2 class="fg-section-title">The Verdict</h2>
-            <p class="fg-section-subtitle">Real experiences from our US clientele.</p>
+            <h2 class="fg-section-title">The Collective Verdict</h2>
+            <p class="fg-section-subtitle">Real experiences shared by our premium US clientele.</p>
             <div class="fg-aggregate-rating">
                 <div class="fg-stars">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -654,7 +723,7 @@
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
-                <span>4.9/5 Average based on 1,200+ Reviews</span>
+                <span>4.9/5 Elite Rating Based on Verified Archive Purchases</span>
             </div>
         </div>
 
@@ -665,12 +734,12 @@
                         <div class="fg-reviewer-avatar">S</div>
                         <div class="fg-reviewer-info">
                             <span class="fg-reviewer-name">Sarah M. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
-                            <span class="fg-reviewer-loc">New York, NY</span>
+                            <span class="fg-reviewer-loc">Palm Beach, FL</span>
                         </div>
                     </div>
                     <div class="fg-review-stars">★★★★★</div>
-                    <p class="fg-review-text">"Absolutely obsessed. The packaging was stunning, it came with the dustbag, and shipping to NYC took exactly 4 days. Will definitely be ordering my next pair of heels from here."</p>
-                    <div class="fg-review-product"><span>Purchased:</span> Luxury Designer Shoes</div>
+                    <p class="fg-review-text">"Absolutely obsessed. The premium packaging was stunning, it arrived complete with protective dustbags, and private concierge logistics to Florida took exactly 4 days. Flawless luxury experience."</p>
+                    <div class="fg-review-product"><span>Purchased:</span> Luxury Designer Handbag</div>
                 </div>
 
                 <div class="fg-review-card">
@@ -678,12 +747,12 @@
                         <div class="fg-reviewer-avatar">C</div>
                         <div class="fg-reviewer-info">
                             <span class="fg-reviewer-name">Chloe T. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
-                            <span class="fg-reviewer-loc">Los Angeles, CA</span>
+                            <span class="fg-reviewer-loc">Beverly Hills, CA</span>
                         </div>
                     </div>
                     <div class="fg-review-stars">★★★★★</div>
-                    <p class="fg-review-text">"The quality is unmatched. I was hesitant at first about ordering through IG DMs, but the team was so professional and the bag is flawless. Best customer service!"</p>
-                    <div class="fg-review-product"><span>Purchased:</span> Premium Designer Bag</div>
+                    <p class="fg-review-text">"The craftmanship is pristine. I was initially hesitant about coordinating private offers over Instagram DMs, but the concierge squad was exceptionally professional and the fine leather is flawless."</p>
+                    <div class="fg-review-product"><span>Purchased:</span> Premium Leather Footwear</div>
                 </div>
 
                 <div class="fg-review-card">
@@ -695,7 +764,7 @@
                         </div>
                     </div>
                     <div class="fg-review-stars">★★★★★</div>
-                    <p class="fg-review-text">"So chic and exactly as described. The glasses came in pristine condition with all the proper boxing. The quality check video they sent before shipping was a huge plus."</p>
+                    <p class="fg-review-text">"Prisine condition and exactly as described. The glasses came in flawless condition with premium box sets. The luxury inspection video sent via DM before dispatch was an incredible touch."</p>
                     <div class="fg-review-product"><span>Purchased:</span> Statement Sunglasses</div>
                 </div>
 
@@ -704,18 +773,18 @@
                         <div class="fg-reviewer-avatar">A</div>
                         <div class="fg-reviewer-info">
                             <span class="fg-reviewer-name">Ashley K. <svg class="fg-verified-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
-                            <span class="fg-reviewer-loc">Chicago, IL</span>
+                            <span class="fg-reviewer-loc">Los Angeles, CA</span>
                         </div>
                     </div>
                     <div class="fg-review-stars">★★★★★</div>
-                    <p class="fg-review-text">"Incredible. I've bought luxury items for years, and the craftsmanship here is identical to the boutiques. My watch arrived safely packed and perfectly timed."</p>
-                    <div class="fg-review-product"><span>Purchased:</span> Premium Designer Watch</div>
+                    <p class="fg-review-text">"Incredible curation. Having invested in premium designer horology for years, the structural execution here is magnificent. My fine watch arrived safely protected and timed."</p>
+                    <div class="fg-review-product"><span>Purchased:</span> Fine Watch Collection</div>
                 </div>
             </div>
             
             <div class="fg-review-nav">
-                <button class="fg-review-arrow" id="rev-scroll-left" aria-label="Previous Review">←</button>
-                <button class="fg-review-arrow" id="rev-scroll-right" aria-label="Next Review">→</button>
+                <button class="fg-review-arrow" id="rev-scroll-left" aria-label="Previous Review Card">←</button>
+                <button class="fg-review-arrow" id="rev-scroll-right" aria-label="Next Review Card">→</button>
             </div>
         </div>
     </section>
@@ -766,44 +835,44 @@
             <div class="fg-ig-header">
                 <h2 class="fg-section-title">On The Grid</h2>
                 <p class="fg-section-subtitle">
-                    Join the ultimate fashion community. Follow 
+                    Join the ultimate style network. Explore live archive drops 
                     <a href="https://instagram.com/omegahubonline" target="_blank" class="fg-ig-handle">@OMEGAHUBONLINE</a>
                 </p>
             </div>
 
             <div class="fg-ig-grid">
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
-                    <img src="images/mix-Inventory/Mixinventory-3.jpg" alt="Omega Hub Lifestyle" loading="lazy">
+                <a href="https://ig.me/m/omegahubonline?text=Hi!%20I'd%20like%20to%20inquire%20about%20your%20latest%20Instagram%20archive%20lifestyle%20drops." target="_blank" class="fg-ig-item">
+                    <img src="images/mix-Inventory/Mixinventory-3.jpg" alt="Omega Hub Premium Fashion Styling Editorial" loading="lazy">
                     <div class="fg-ig-overlay">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        <span>Shop via DM</span>
+                        <span>Negotiate via DM</span>
                     </div>
                 </a>
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
-                    <img src="images/SHIRTS & Dresses_/Balenciaga/Shirt&Dress-Balenciaga-1.jpg" alt="Balenciaga Apparel" loading="lazy">
+                <a href="https://ig.me/m/omegahubonline?text=Hi!%20I'm%20interested%20in%20the%20Balenciaga%20apparel%20featured%20on%20your%20feed." target="_blank" class="fg-ig-item">
+                    <img src="images/SHIRTS & Dresses_/Balenciaga/Shirt&Dress-Balenciaga-1.jpg" alt="Fine Designer Apparel and Casual Resort Wear Portfolio" loading="lazy">
                     <div class="fg-ig-overlay">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        <span>Shop via DM</span>
+                        <span>Negotiate via DM</span>
                     </div>
                 </a>
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
-                    <img src="images/mix-Inventory/Mixinventory-4.jpg" alt="Designer Accessories Stack" loading="lazy">
+                <a href="https://ig.me/m/omegahubonline?text=Hi!%20I'd%20like%20to%20view%20your%20available%20designer%20accessories%20and%20jewelry." target="_blank" class="fg-ig-item">
+                    <img src="images/mix-Inventory/Mixinventory-4.jpg" alt="Curated High-End Accessories Collection Stack" loading="lazy">
                     <div class="fg-ig-overlay">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        <span>Shop via DM</span>
+                        <span>Negotiate via DM</span>
                     </div>
                 </a>
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="fg-ig-item">
-                    <img src="images/BAGS/Dior/Bag-Chloe-1.jpg" alt="Premium Designer Bag" loading="lazy">
+                <a href="https://ig.me/m/omegahubonline?text=Hi!%20I'm%20interested%20in%20inquiring%20about%20fine%20leather%20handbags." target="_blank" class="fg-ig-item">
+                    <img src="images/BAGS/Dior/Bag-Chloe-1.jpg" alt="Premium Exotic Leather Designer Handbag Curation" loading="lazy">
                     <div class="fg-ig-overlay">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        <span>Shop via DM</span>
+                        <span>Negotiate via DM</span>
                     </div>
                 </a>
             </div>
 
             <div class="fg-ig-footer">
-                <a href="https://instagram.com/omegahubonline" target="_blank" class="fg-ig-btn">Follow Us</a>
+                <a href="https://instagram.com/omegahubonline" target="_blank" class="fg-ig-btn" aria-label="Follow Omega Hub Online on Instagram for private drops">Follow Private Feed</a>
             </div>
         </div>
     </section>

@@ -9,12 +9,12 @@ const headerHTML = `
         
         <div class="hub-marquee-container">
             <div class="hub-marquee">
-                <span>🔥 FAST & FREE US SHIPPING OVER $150</span>
-                <span>💖 NEW ARRIVALS JUST DROPPED</span>
-                <span>✨ DM @OMEGAHUBONLINE TO ORDER</span>
-                <span>🔥 FAST & FREE US SHIPPING OVER $150</span>
-                <span>💖 NEW ARRIVALS JUST DROPPED</span>
-                <span>✨ DM @OMEGAHUBONLINE TO ORDER</span>
+                <span>✨ COMPLIMENTARY VIP SHIPPING TO CALIFORNIA & FLORIDA</span>
+                <span>🌴 NEW: THE MIAMI RESORT EDIT HAS ARRIVED</span>
+                <span>💎 DM @OMEGAHUBONLINE FOR PRIVATE ORDERS</span>
+                <span>✨ COMPLIMENTARY VIP SHIPPING TO CALIFORNIA & FLORIDA</span>
+                <span>🌴 NEW: THE MIAMI RESORT EDIT HAS ARRIVED</span>
+                <span>💎 DM @OMEGAHUBONLINE FOR PRIVATE ORDERS</span>
             </div>
         </div>
 
@@ -26,44 +26,44 @@ const headerHTML = `
                 <span class="hub-bar"></span>
             </button>
 
-            <a href="index.html" class="hub-brand" aria-label="Omega Hub Online Home">
+            <a href="index.html" class="hub-brand" aria-label="Omega Hub - Luxury Fashion & Resort Wear for CA and FL">
                 OMEGA HUB
             </a>
 
-            <nav class="hub-desktop-nav" aria-label="Primary Navigation">
+            <nav class="hub-desktop-nav" aria-label="Luxury Fashion Collections">
                 <ul class="hub-nav-list">
-                    <li><a href="new-in.html" class="hub-nav-link hub-highlight">New In</a></li>
-                    <li><a href="bags.html" class="hub-nav-link">Bags</a></li>
-                    <li><a href="shoes.html" class="hub-nav-link">Shoes</a></li>
-                    <li><a href="watches.html" class="hub-nav-link">Watches</a></li>
-                    <li><a href="discover.html" class="hub-nav-link">Discover</a></li>
-                    <li><a href="sale.html" class="hub-nav-link hub-sale">Sale</a></li>
+                    <li><a href="new-in.html" class="hub-nav-link hub-highlight">The Resort Edit</a></li>
+                    <li><a href="bags.html" class="hub-nav-link">Designer Bags</a></li>
+                    <li><a href="shoes.html" class="hub-nav-link">Luxe Footwear</a></li>
+                    <li><a href="watches.html" class="hub-nav-link">Timepieces</a></li>
+                    <li><a href="discover.html" class="hub-nav-link">Style Guides</a></li>
+                    <li><a href="sale.html" class="hub-nav-link hub-sale">Private Archive</a></li>
                 </ul>
             </nav>
 
             <div class="hub-actions">
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="hub-ig-button" aria-label="Order via Instagram DM">
+                <a href="https://ig.me/m/omegahubonline" target="_blank" class="hub-ig-button" aria-label="Contact VIP Styling & Orders via Instagram DM">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
-                    <span class="hub-ig-text">Order via DM</span>
+                    <span class="hub-ig-text">VIP Orders DM</span>
                 </a>
             </div>
         </div>
 
         <div class="hub-mobile-menu" aria-hidden="true">
             <nav class="hub-mobile-nav">
-                <a href="new-in.html" class="hub-mobile-link hub-highlight">New In</a>
-                <a href="bags.html" class="hub-mobile-link">Bags</a>
-                <a href="shoes.html" class="hub-mobile-link">Shoes</a>
-                <a href="watches.html" class="hub-mobile-link">Watches</a>
-                <a href="discover.html" class="hub-mobile-link">Discover</a>
-                <a href="sale.html" class="hub-mobile-link hub-sale">Sale</a>
+                <a href="new-in.html" class="hub-mobile-link hub-highlight">The Resort Edit</a>
+                <a href="bags.html" class="hub-mobile-link">Designer Bags</a>
+                <a href="shoes.html" class="hub-mobile-link">Luxe Footwear</a>
+                <a href="watches.html" class="hub-mobile-link">Timepieces</a>
+                <a href="discover.html" class="hub-mobile-link">Style Guides</a>
+                <a href="sale.html" class="hub-mobile-link hub-sale">Private Archive</a>
             </nav>
             <div class="hub-mobile-footer">
-                <a href="https://ig.me/m/omegahubonline" class="hub-mobile-ig-btn">DM @OMEGAHUBONLINE</a>
+                <a href="https://ig.me/m/omegahubonline" class="hub-mobile-ig-btn">DM FOR VIP ORDERS</a>
             </div>
         </div>
     </header>

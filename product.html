@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Vault Piece | Omega Hub Online</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Core Variables --- */
+        :root {
+            --fg-black: #0A0A0A;
+            --fg-white: #FFFFFF;
+            --fg-off-white: #FAFAFA;
+            --fg-grey-light: #EAEAEA;
+            --fg-grey: #666666;
+            --fg-accent: #FF0055;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: var(--font-sans); 
+            background-color: var(--fg-white); 
+            color: var(--fg-black); 
+            padding-top: 100px; /* Accounts for fixed header */
+        }
+
+        /* --- PDP Layout --- */
+        .pdp-container { 
+            display: flex; 
+            max-width: 1300px; 
+            margin: 40px auto 100px; 
+            padding: 0 5%; 
+            gap: 60px; 
+            align-items: flex-start; 
+        }
+
+        /* --- Image Section --- */
+        .pdp-image-col { 
+            flex: 1.2; 
+            background: #F8F8F8; 
+            border: 1px solid var(--fg-grey-light); 
+            position: sticky; 
+            top: 120px; 
+        }
+        .pdp-image-col img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            object-fit: cover; 
+        }
+
+        /* --- Info Section --- */
+        .pdp-info-col { 
+            flex: 1; 
+            display: flex; 
+            flex-direction: column; 
+            padding-top: 20px;
+        }
+        
+        .breadcrumb {
+            font-size: 0.75rem;
+            color: var(--fg-grey);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .pdp-brand { 
+            font-size: 0.9rem; 
+            color: var(--fg-grey); 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            margin-bottom: 10px; 
+            font-weight: 700; 
+        }
+        
+        .pdp-title { 
+            font-family: var(--font-serif); 
+            font-size: 3rem; 
+            margin: 0 0 20px 0; 
+            line-height: 1.1; 
+            text-transform: capitalize;
+        }
+        
+        .pdp-price-wrapper { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            margin-bottom: 5px; 
+        }
+        .pdp-price { 
+            font-size: 2rem; 
+            font-weight: 700; 
+            color: var(--fg-black); 
+        }
+        .pdp-sale-tag { 
+            background: var(--fg-accent); 
+            color: var(--fg-white); 
+            padding: 6px 12px; 
+            font-size: 0.85rem; 
+            font-weight: 700; 
+            letter-spacing: 1px; 
+        }
+        
+        .negotiation-text { 
+            font-size: 0.9rem; 
+            color: var(--fg-grey); 
+            font-style: italic; 
+            margin-bottom: 30px; 
+            margin-top: 5px;
+        }
+
+        /* --- AEO/SEO Description Block --- */
+        .pdp-description-block {
+            margin-bottom: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--fg-grey-light);
+        }
+        .aeo-question {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--fg-black);
+        }
+        .aeo-answer {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--fg-grey);
+            margin: 0;
+        }
+        
+        /* --- Actions --- */
+        .btn-dm { 
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 0; 
+            width: 100%; 
+            text-decoration: none; 
+            font-size: 1rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            background-color: var(--fg-black); 
+            color: var(--fg-white); 
+            transition: transform 0.2s ease, background 0.3s ease; 
+        }
+        .btn-dm:hover { 
+            background-color: var(--fg-accent); 
+            transform: translateY(-3px);
+        }
+
+        /* --- Trust Badges --- */
+        .trust-badges {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--fg-black);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 15px;
+            background: var(--fg-off-white);
+            border: 1px solid var(--fg-grey-light);
+        }
+        
+        @media (max-width: 992px) {
+            .pdp-container { flex-direction: column; gap: 40px; margin-top: 20px; }
+            .pdp-image-col { position: relative; top: 0; width: 100%; }
+            .pdp-title { font-size: 2.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <div class="pdp-container">
+        <!-- Left: Dynamic Image -->
+        <div class="pdp-image-col">
+            <img id="pdp-image" src="" alt="Omega Hub Vault Item" loading="eager">
+        </div>
+        
+        <!-- Right: Dynamic Info & SEO Block -->
+        <div class="pdp-info-col">
+            <div class="breadcrumb">Home / The Vault / <span id="pdp-breadcrumb">Loading...</span></div>
+            
+            <span class="pdp-brand" id="pdp-brand">Omega Hub Private Archive</span>
+            <h1 class="pdp-title" id="pdp-title">Loading Vault Piece...</h1>
+            
+            <div class="pdp-price-wrapper">
+                <span class="pdp-price" id="pdp-price">$--</span>
+                <span class="pdp-sale-tag">40% OFF</span>
+            </div>
+            <p class="negotiation-text">Open to Private Offers</p>
+
+            <a href="#" id="dm-link" target="_blank" class="btn-dm">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                DM TO NEGOTIATE
+            </a>
+
+            <!-- Dynamic AEO Description Block -->
+            <div class="pdp-description-block" id="pdp-description">
+                <!-- Content will be injected here via JavaScript -->
+            </div>
+
+            <!-- GEO/Trust Signals -->
+            <div class="trust-badges">
+                <div class="trust-item">
+                    <span>💎</span> 100% Authenticity Guaranteed
+                </div>
+                <div class="trust-item">
+                    <span>🌴</span> VIP Shipping to California & Florida
+                </div>
+                <div class="trust-item">
+                    <span>🤝</span> Private Concierge & Offer Negotiation
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- External JS Files -->
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+    <!-- Dynamic Rendering Logic -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Grab parameters sent from new-in.html
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            const productId = urlParams.get('id') || 'Exclusive';
+            const price = urlParams.get('price') || 'TBD';
+            const imgPath = urlParams.get('img') || '';
+            const brand = urlParams.get('brand') || 'Designer';
+            const category = urlParams.get('cat') || 'Piece';
+
+            // 2. Populate basic UI elements
+            document.getElementById('pdp-brand').textContent = brand;
+            document.getElementById('pdp-title').textContent = `${brand} ${category}`;
+            document.getElementById('pdp-breadcrumb').textContent = `${brand} ${category}`;
+            document.getElementById('pdp-price').textContent = price !== 'TBD' ? `$${price}` : price;
+            
+            // 3. Update Image
+            const imgElement = document.getElementById('pdp-image');
+            if(imgPath) {
+                imgElement.src = imgPath;
+                imgElement.alt = `Authentic ${brand} ${category} - Omega Hub Private Vault`;
+            }
+
+            // 4. Generate the AEO/SEO Content Block dynamically
+            const aeoContent = `
+                <div class="aeo-question">Is this ${brand} ${category} authentic and open to offers?</div>
+                <p class="aeo-answer">Yes. Discover effortless luxury with this authentic <strong>${brand} ${category}</strong>. Curated specifically for our VIP clientele in California and Florida, this piece represents the pinnacle of high-end resort style. As part of the Omega Hub Private Archive, we guarantee premium quality and warmly welcome private negotiations. The listed Independence Day price is <strong>$${price}</strong>, but we invite you to DM our concierge with your offer to secure this exclusive ${brand} piece.</p>
+            `;
+            document.getElementById('pdp-description').innerHTML = aeoContent;
+
+            // 5. Build the Pre-filled Instagram DM Link
+            const dmLink = document.getElementById('dm-link');
+            const message = `Hi VIP Concierge! I'd like to negotiate an offer for the ${brand} ${category} (Vault Piece #${productId}). The listed price is $${price}, but my offer is: ____. Image: ${imgPath}`;
+            dmLink.href = `https://ig.me/m/omegahubonline?text=${encodeURIComponent(message)}`;
+            
+            // 6. Update Page Title for Tabs
+            document.title = `${brand} ${category} | Omega Hub Online`;
+        });
+    </script>
+</body>
+</html>
