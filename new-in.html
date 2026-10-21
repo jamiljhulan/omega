@@ -29,8 +29,8 @@
         /* --- Core Variables --- */
         :root {
             --fg-black: #0A0A0A; --fg-white: #FFFFFF; --fg-off-white: #FAFAFA;
-            --fg-grey-light: #EAEAEA; --fg-grey: #666666; --fg-accent: #FF0055;
-            --fg-navy: #0A1128; --font-serif: 'Playfair Display', serif; --font-sans: 'Inter', sans-serif;
+            --fg-grey-light: #EAEAEA; --fg-grey: #666666; --fg-accent: #FF5E00; /* Halloween Pumpkin Orange Accent */
+            --fg-navy: #0F0E17; --font-serif: 'Playfair Display', serif; --font-sans: 'Inter', sans-serif;
         }
 
         body { margin: 0; font-family: var(--font-sans); background-color: var(--fg-off-white); color: var(--fg-black); overflow-x: hidden; }
@@ -41,7 +41,7 @@
         .hero-content { position: relative; z-index: 2; color: var(--fg-white); padding: 0 5%; }
         .hero-tag { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; display: block; color: var(--fg-accent); }
         .hero-title { font-family: var(--font-serif); font-size: 4.5rem; font-weight: 400; margin: 0 0 20px 0; letter-spacing: -1px; }
-        .hero-subtitle { font-family: var(--font-sans); font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: #E0E0E0; line-height: 1.6; }
+        .hero-subtitle { font-family: var(--font-sans); font-size: 1.1rem; max-width: 650px; margin: 0 auto; color: #E0E0E0; line-height: 1.6; }
 
         /* --- AEO/GEO Content Block --- */
         .aeo-content-block { background: var(--fg-white); padding: 40px 5%; text-align: center; border-bottom: 1px solid var(--fg-grey-light); }
@@ -82,17 +82,19 @@
         .btn-load-more { background-color: var(--fg-black); color: var(--fg-white); border: none; padding: 16px 50px; font-family: var(--font-sans); font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: background-color 0.3s ease; }
         .btn-load-more:hover { background-color: var(--fg-accent); }
 
-        /* Popup Styles Omitted for Brevity - Keep your existing popup CSS here */
-        .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease; backdrop-filter: blur(5px); }
+        /* Popup Styles */
+        .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); z-index: 9999; display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease; backdrop-filter: blur(5px); }
         .popup-overlay.active { opacity: 1; visibility: visible; }
-        .popup-content { background: var(--fg-navy); width: 90%; max-width: 500px; padding: 50px 40px; position: relative; text-align: center; border: 4px solid var(--fg-white); transform: translateY(20px); transition: transform 0.4s ease; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
+        .popup-content { background: var(--fg-navy); width: 90%; max-width: 500px; padding: 50px 40px; position: relative; text-align: center; border: 2px solid var(--fg-accent); transform: translateY(20px); transition: transform 0.4s ease; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
         .popup-overlay.active .popup-content { transform: translateY(0); }
         .popup-close { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; color: var(--fg-white); cursor: pointer; background: transparent; border: none; }
-        .popup-stars { color: var(--fg-white); font-size: 1.5rem; letter-spacing: 10px; margin-bottom: 15px; }
-        .popup-title { font-family: var(--font-serif); color: var(--fg-white); font-size: 2.5rem; margin: 0 0 10px 0; text-transform: uppercase; }
-        .popup-subtitle { font-family: var(--font-sans); color: var(--fg-accent); font-weight: 700; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
-        .popup-text { color: var(--fg-off-white); font-size: 1rem; line-height: 1.5; margin-bottom: 30px; }
-        .popup-btn { display: inline-block; background: var(--fg-white); color: var(--fg-navy); padding: 15px 40px; text-decoration: none; font-weight: 700; text-transform: uppercase; }
+        .popup-stars { color: var(--fg-accent); font-size: 1.4rem; letter-spacing: 8px; margin-bottom: 15px; }
+        .popup-title { font-family: var(--font-serif); color: var(--fg-white); font-size: 2.4rem; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 1px; }
+        .popup-subtitle { font-family: var(--font-sans); color: var(--fg-accent); font-weight: 700; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+        .popup-text { color: var(--fg-off-white); font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; }
+        .popup-validity { display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--fg-white); background: rgba(255, 94, 0, 0.2); border: 1px solid var(--fg-accent); padding: 6px 14px; margin-bottom: 25px; border-radius: 2px; }
+        .popup-btn { display: inline-block; background: var(--fg-accent); color: var(--fg-white); padding: 15px 40px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: opacity 0.3s ease; }
+        .popup-btn:hover { opacity: 0.9; }
 
         @media (max-width: 1024px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
         @media (max-width: 768px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } .btn-dm { padding: 10px 0; font-size: 0.7rem;} .popup-content { padding: 40px 20px; } }
@@ -102,24 +104,28 @@
 
     <div id="header-placeholder"></div>
 
-    <!-- Popup -->
+    <!-- Halloween Promo Popup -->
     <div class="popup-overlay" id="promo-popup">
         <div class="popup-content">
             <button class="popup-close" id="close-popup">&times;</button>
-            <div class="popup-stars">★★★★★</div>
-            <h2 class="popup-title">Independence Day</h2>
-            <div class="popup-subtitle">40% Off + Open Offers</div>
-            <p class="popup-text">We have applied an automatic 40% discount across our entire curated inventory. Found something you love? DM us—we respect and welcome private price negotiations.</p>
-            <a href="#" class="popup-btn" id="start-shopping-btn">Start Shopping</a>
+            <div class="popup-stars">🎃 ✦ ✦ ✦ 🎃</div>
+            <h2 class="popup-title">Halloween Special</h2>
+            <div class="popup-subtitle">40% Off + Open Negotiations</div>
+            <p class="popup-text">Unlock exclusive vault access with an automatic 40% discount applied sitewide. Found a piece you desire? Send us a DM—we welcome private offers.</p>
+            <div class="popup-validity">Valid Through October 31st</div>
+            <div>
+                <a href="#" class="popup-btn" id="start-shopping-btn">Explore The Vault</a>
+            </div>
         </div>
     </div>
 
+    <!-- Hero Section -->
     <section class="new-in-hero">
         <img src="images/BAGS/Fendi/Bag-Fendi-73.jpg" alt="Luxury Resort Wear">
         <div class="hero-content">
-            <span class="hero-tag">Private Archive Drop</span>
+            <span class="hero-tag">Limited Vault Edition</span>
             <h1 class="hero-title">The Vault</h1>
-            <p class="hero-subtitle">1,200+ highly-coveted luxury pieces have just landed. Independence Day pricing is active.</p>
+            <p class="hero-subtitle">1,200+ highly-coveted luxury pieces. Exclusive Halloween pricing active through October 31st.</p>
         </div>
     </section>
 
@@ -144,7 +150,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            
             // Popup logic
             const popupOverlay = document.getElementById('promo-popup');
             setTimeout(() => popupOverlay.classList.add('active'), 1500);
@@ -152,7 +157,7 @@
             document.getElementById('close-popup').addEventListener('click', closePopup);
             document.getElementById('start-shopping-btn').addEventListener('click', closePopup);
 
-            // PASTE YOUR 1200+ LINKS HERE
+            // 1200+ Image Links
             const rawImageList = `
 images/WALLETS/YSL/Wallet-YSL1.jpg
 images/BAGS/Chanel/Celine-5.jpg
@@ -1247,30 +1252,31 @@ images/WATCHES/Cartier/Watches-cartier14.jpg
                     const globalIndex = currentIndex + idx; 
                     
                     // --- THE SMART PARSER ---
-                    // Splitting: "images" / "SHOES" / "Gucci" / "Shoes-Gucci18.jpg"
                     const pathParts = imageSrc.split('/');
                     
                     let categoryRaw = "Luxury Item";
                     let brandRaw = "Private Archive";
                     
                     if(pathParts.length >= 3) {
-                        // Extract and clean up dashes (e.g. "MUGS-TRAYS" -> "MUGS TRAYS")
                         categoryRaw = pathParts[1].replace(/-/g, ' '); 
                         brandRaw = pathParts[2].replace(/-/g, ' ');
                     }
 
                     const originalPrice = Math.floor(Math.random() * (1200 - 400 + 1)) + 400;
                     const salePrice = Math.floor(originalPrice * 0.60);
-                    const badgeText = (globalIndex % 6 === 0) ? '<span class="shop-badge badge-exclusive">JULY 4TH DROP</span>' : '<span class="shop-badge">40% OFF</span>';
+                    
+                    // Badge updated to Halloween Theme
+                    const badgeText = (globalIndex % 6 === 0) 
+                        ? '<span class="shop-badge badge-exclusive">HALLOWEEN DROP</span>' 
+                        : '<span class="shop-badge">40% OFF</span>';
                     
                     const altText = `Authentic ${brandRaw} ${categoryRaw} - Omega Hub Private Vault`;
                     
-                    // Build the URL to product.html, passing all the smart data
+                    // Build the URL to product.html
                     const productUrl = `product.html?id=${globalIndex + 1}&price=${salePrice}&cat=${encodeURIComponent(categoryRaw)}&brand=${encodeURIComponent(brandRaw)}&img=${encodeURIComponent(imageSrc)}`;
 
                     generatedHTML += `
                         <div class="shop-card">
-                            <!-- Image links to Product Page -->
                             <a href="${productUrl}" class="shop-card-image">
                                 ${badgeText}
                                 <img src="${imageSrc}" alt="${altText}" loading="lazy">
@@ -1278,7 +1284,6 @@ images/WATCHES/Cartier/Watches-cartier14.jpg
                             <div class="shop-card-content">
                                 <span class="shop-card-brand">${brandRaw}</span>
                                 
-                                <!-- Title links to Product Page -->
                                 <a href="${productUrl}" class="shop-card-title-link">
                                     <h3 class="shop-card-title">${brandRaw} ${categoryRaw}</h3>
                                 </a>
@@ -1289,8 +1294,7 @@ images/WATCHES/Cartier/Watches-cartier14.jpg
                                 </div>
                                 <p class="negotiation-text">Open to Private Offers</p>
 
-                                <!-- DM Button stays separate -->
-                                <a href="https://ig.me/m/bagveravaus?text=${encodeURIComponent(`Hi VIP Concierge! I'd like to negotiate an offer for the ${brandRaw} ${categoryRaw} (Vault Piece #${globalIndex + 1}). The listed price is $${salePrice}, but my offer is: ____. Image: ${imageSrc}`)}" target="_blank" class="btn-dm">DM TO NEGOTIATE</a>
+                                <a href="https://ig.me/m/bagveravaus?text=${encodeURIComponent(`Hi VIP Concierge! I'd like to negotiate a Halloween offer for the ${brandRaw}${categoryRaw} (Vault Piece #${globalIndex + 1}). The listed price is$${salePrice}, but my offer is: ____. Image: ${imageSrc}`)}" target="_blank" class="btn-dm">DM TO NEGOTIATE</a>
                             </div>
                         </div>
                     `;
