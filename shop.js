@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span style="font-size: 1.5rem; font-weight: 700; color: #000;">${currentPrice}</span>
                                 </div>
                                 <div class="modal-actions">
-                                    <a href="https://ig.me/m/omegahubonline" target="_blank" class="btn-primary" style="display: block; width: 100%; margin-bottom: 10px;">DM TO BUY INSTANTLY</a>
+                                    <a href="https://ig.me/m/bagveravaus" target="_blank" class="btn-primary" style="display: block; width: 100%; margin-bottom: 10px;">DM TO BUY INSTANTLY</a>
                                     <p style="font-size: 0.8rem; color: #666; text-align: center;">Want a better deal? Message us on Instagram to negotiate!</p>
                                 </div>
                             </div>
