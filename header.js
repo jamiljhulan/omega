@@ -42,7 +42,7 @@ const headerHTML = `
             </nav>
 
             <div class="hub-actions">
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="hub-ig-button" aria-label="Contact VIP Styling & Orders via Instagram DM">
+                <a href="https://ig.me/m/bagveravaus" target="_blank" class="hub-ig-button" aria-label="Contact VIP Styling & Orders via Instagram DM">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -63,7 +63,7 @@ const headerHTML = `
                 <a href="sale.html" class="hub-mobile-link hub-sale">Private Archive</a>
             </nav>
             <div class="hub-mobile-footer">
-                <a href="https://ig.me/m/omegahubonline" class="hub-mobile-ig-btn">DM FOR VIP ORDERS</a>
+                <a href="https://ig.me/m/bagveravaus" class="hub-mobile-ig-btn">DM FOR VIP ORDERS</a>
             </div>
         </div>
     </header>
