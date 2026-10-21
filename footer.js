@@ -10,7 +10,7 @@ const footerHTML = `
             <div class="hub-footer-banner-content">
                 <h2 class="hub-banner-title">EFFORTLESS LUXURY. <span class="hub-text-pink">SECURE IT VIA VIP DM.</span></h2>
                 <p class="hub-banner-sub">Skip the waitlist. Contact our styling concierge via Instagram DM for private orders, Miami and LA exclusive drops, and white-glove service.</p>
-                <a href="https://ig.me/m/omegahubonline" target="_blank" class="hub-banner-btn" aria-label="DM our VIP styling concierge on Instagram">
+                <a href="https://ig.me/m/bagveravaus" target="_blank" class="hub-banner-btn" aria-label="DM our VIP styling concierge on Instagram">
                     <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
